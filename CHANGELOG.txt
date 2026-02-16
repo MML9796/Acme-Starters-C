@@ -10,4 +10,4 @@
 
 ** Year 2026 ******************************************************************
 
-- 26.1.0	This is the first version of Acme Start C
+- 26.1.0	This is the first version of Acme Starts C

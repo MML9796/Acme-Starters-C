@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Acme-Starter-C</name>
+	<name>Acme-Starters</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -39,6 +39,11 @@
 			<name>acme-framework</name>
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-26.2.0/target/classes</locationURI>
+		</link>
+		<link>
+			<name>target/classes</name>
+			<type>2</type>
+			<location>//C:/Users/sandr/Desktop/Universidad/DP2/Workspace-26/Projects/Acme-Starters-C/target/classes/</location>
 		</link>
 	</linkedResources>
 </projectDescription>
