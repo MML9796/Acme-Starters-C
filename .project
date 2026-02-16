@@ -43,7 +43,7 @@
 		<link>
 			<name>target/classes</name>
 			<type>2</type>
-			<location>//C:/Users/sandr/Desktop/Universidad/DP2/Workspace-26/Projects/Acme-Starters-C/target/classes/</location>
+			<location>WORKSPACE_LOC/Projects/Acme-Starters-C/target/classes/</location>
 		</link>
 	</linkedResources>
 </projectDescription>
