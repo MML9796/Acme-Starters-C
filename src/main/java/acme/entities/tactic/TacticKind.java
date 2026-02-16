@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.tactic;
 
 public enum TacticKind {
 
