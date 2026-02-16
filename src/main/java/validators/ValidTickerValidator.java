@@ -10,7 +10,7 @@ public class ValidTickerValidator implements ConstraintValidator<ValidTicker, St
 
 	@Override
 	public boolean isValid(final String value, final ConstraintValidatorContext context) {
-		if (value == null)
+		if (value == null || value.trim().isEmpty())
 			return false;
 
 		return value.matches("^[A-Z]{2}[0-9]{2}-\\w{5,10}$");

@@ -18,7 +18,7 @@ import validators.ValidTextValidator;
 @Constraint(validatedBy = ValidTextValidator.class)
 public @interface ValidText {
 
-	String message() default "El texto debe tener entre 1 y 255 caracteres";
+	String message() default "El texto debe tener entre 1 y 255 caracteres y no estar vacío";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

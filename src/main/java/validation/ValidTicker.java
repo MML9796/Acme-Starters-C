@@ -19,7 +19,7 @@ import validators.ValidTickerValidator;
 
 public @interface ValidTicker {
 
-	String message() default "{acme.datatypes.constraints.ValidTicker.message}";
+	String message() default "El texto debe cumplir el patron AB12-ABCDE y no estar vacío";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
