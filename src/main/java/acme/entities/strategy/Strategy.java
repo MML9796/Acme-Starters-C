@@ -1,21 +1,21 @@
 
-package acme.entities.Strategy;
+package acme.entities.strategy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Moment;
+import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
-import acme.realms.Fundraiser;
 import acme.client.components.validation.ValidUrl;
+import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
 import validation.ValidHeader;
@@ -33,27 +33,27 @@ public class Strategy extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@NotNull
+	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
-	@NotNull
+	@Mandatory
 	@ValidHeader
 	@Column
 	private String				name;
 
-	@NotNull
+	@Mandatory
 	@ValidText
 	@Column
 	private String				description;
 
-	@NotNull
+	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	//@Temporal(TemporalType.TIMESTAMP)
 	private Moment				startMoment;
 
-	@NotNull
+	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	//@Temporal(TemporalType.TIMESTAMP)
 	private Moment				endMoment;
@@ -62,14 +62,12 @@ public class Strategy extends AbstractEntity {
 	@Column
 	private String				moreInfo;
 
-	@NotNull
+	@Mandatory
 	@Valid
 	@Column
 	private Boolean				draftMode;
 
 
-	@NotNull
-	@Valid
 	@Transient
 	public double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
@@ -78,8 +76,6 @@ public class Strategy extends AbstractEntity {
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
-	@NotNull
-	//@ValidScore
 	@Transient
 	public Double expectedPercentage() {
 		Double total = this.repository.sumPercentageByStrategyId(this.getId());
@@ -89,7 +85,7 @@ public class Strategy extends AbstractEntity {
 	}
 
 
-	@NotNull
+	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
 	private Fundraiser fundraiser;

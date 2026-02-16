@@ -4,9 +4,9 @@ package acme.realms;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import acme.client.components.basis.AbstractRole;
+import acme.client.components.validation.Mandatory;
 import lombok.Getter;
 import lombok.Setter;
 import validation.ValidHeader;
@@ -19,17 +19,17 @@ public class Fundraiser extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@NotNull
+	@Mandatory
 	@ValidHeader
 	@Column
 	private String				bank;
 
-	@NotNull
+	@Mandatory
 	@ValidText
 	@Column
 	private String				statement;
 
-	@NotNull
+	@Mandatory
 	@Valid
 	@Column
 	private Boolean				agent;
