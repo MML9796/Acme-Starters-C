@@ -22,6 +22,7 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Inventor;
 import acme.validation.ValidHeader;
+import acme.validation.ValidInvention;
 import acme.validation.ValidText;
 import acme.validation.ValidTicker;
 import lombok.Getter;
@@ -30,6 +31,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidInvention
 public class Invention extends AbstractEntity {
 
 	@Transient
