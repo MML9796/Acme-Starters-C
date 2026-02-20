@@ -8,14 +8,19 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-
-import acme.validators.ValidTextValidator;
+import javax.validation.ReportAsSingleViolation;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Target({
 	ElementType.FIELD, ElementType.METHOD
 })
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = ValidTextValidator.class)
+@Constraint(validatedBy = {})
+@ReportAsSingleViolation
+
+@NotBlank
+@Size(min = 1, max = 255)
 public @interface ValidText {
 
 	String message() default "El texto debe tener entre 1 y 255 caracteres y no estar vacío";

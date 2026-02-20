@@ -8,14 +8,19 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-
-import acme.validators.ValidHeaderValidator;
+import javax.validation.ReportAsSingleViolation;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Target({
 	ElementType.FIELD, ElementType.METHOD
 })
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = ValidHeaderValidator.class)
+@Constraint(validatedBy = {})
+@ReportAsSingleViolation
+
+@NotBlank
+@Size(min = 1, max = 75)
 public @interface ValidHeader {
 
 	String message() default "El encabezado debe tener entre 1 y 75 caracteres y no estar vacío";
