@@ -74,8 +74,7 @@ public class Strategy extends AbstractEntity {
 	@Transient
 	public double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
-		double dias = diffMillis / (1000.0 * 60 * 60 * 24);
-		double meses = dias / 30.436875;
+		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
 

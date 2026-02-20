@@ -20,6 +20,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Spokesperson;
+import acme.validation.ValidCampaign;
 import acme.validation.ValidHeader;
 import acme.validation.ValidText;
 import acme.validation.ValidTicker;
@@ -29,6 +30,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidCampaign
 public class Campaign extends AbstractEntity {
 
 	@Transient
@@ -79,8 +81,7 @@ public class Campaign extends AbstractEntity {
 	@Transient
 	public double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
-		double dias = diffMillis / (1000.0 * 60 * 60 * 24);
-		double meses = dias / 30.436875;
+		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
