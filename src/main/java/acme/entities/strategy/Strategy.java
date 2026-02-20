@@ -20,6 +20,7 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Fundraiser;
 import acme.validation.ValidHeader;
+import acme.validation.ValidStrategy;
 import acme.validation.ValidText;
 import acme.validation.ValidTicker;
 import lombok.Getter;
@@ -28,6 +29,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidStrategy
 public class Strategy extends AbstractEntity {
 
 	@Transient
