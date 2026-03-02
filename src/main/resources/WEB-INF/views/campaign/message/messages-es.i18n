@@ -1,0 +1,4 @@
+# Errores de Validación de Campaña
+acme.validation.campaign.one-milestone.message = Una campaña no puede ser publicada a menos que tenga al menos un hito.
+acme.validation.campaign.invalid-time-interval.message = Una campaña no puede ser publicada con un intervalo de tiempo inválido. La fecha de fin debe ser posterior a la fecha de inicio.
+acme.validation.campaign.duplicated-ticker.message = Este ticker ya está siendo utilizado por otra campaña.
