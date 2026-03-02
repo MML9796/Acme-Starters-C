@@ -16,7 +16,7 @@ import acme.validators.SponsorshipValidator;
 @Constraint(validatedBy = SponsorshipValidator.class)
 public @interface ValidSponsorship {
 
-	String message() default "El sponsorship no cumple con las restricciones";
+	String message() default "";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

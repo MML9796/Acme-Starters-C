@@ -1,0 +1,1 @@
+acme.validation.header.invalid.message = El encabezado debe tener entre 1 y 75 caracteres y no estar vacío

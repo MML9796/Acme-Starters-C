@@ -1,15 +1,12 @@
 
 package acme.validators;
 
-import java.util.List;
-
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.entities.donation.Donation;
 import acme.entities.sponsorship.Sponsorship;
 import acme.entities.sponsorship.SponsorshipRepository;
 import acme.validation.ValidSponsorship;
@@ -38,19 +35,26 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 
 			if (!sponsorship.getDraftMode()) {
 
-				boolean fechaCorrecta;
-				fechaCorrecta = sponsorship.getEndMoment().after(sponsorship.getStartMoment());
+				boolean uniqueSponsorship;
+				Sponsorship existingSponsorship;
 
-				super.state(context, fechaCorrecta, "endMoment", "startMoment/endMoment must be a valid time interval in future");
+				existingSponsorship = this.repository.findSponsorshipByTicker(sponsorship.getTicker());
+				uniqueSponsorship = existingSponsorship == null || existingSponsorship.equals(sponsorship);
 
-				boolean hasDonation = true;
+				super.state(context, uniqueSponsorship, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
 
-				if (sponsorship.getId() != 0) {
-					List<Donation> donations = this.repository.findDonationBySponsorshipId(sponsorship.getId());
-					hasDonation = !donations.isEmpty();
-				}
+				boolean correctDate;
+				correctDate = sponsorship.getEndMoment().after(sponsorship.getStartMoment());
 
-				super.state(context, hasDonation, "*", "Sponsorship cannot be published unless they have at least one donation");
+				super.state(context, correctDate, "endMoment", "acme.validation.sponsorship.invalid-date.message");
+
+				boolean atLeastOneDonation = true;
+				int existingDonations;
+
+				existingDonations = this.repository.findDonationsSizeBySponsorshipId(sponsorship.getId());
+				atLeastOneDonation = existingDonations >= 1;
+
+				super.state(context, atLeastOneDonation, "*", "acme.validation.sponsorship.missing-donations.message");
 			}
 
 			resultado = !super.hasErrors(context);
