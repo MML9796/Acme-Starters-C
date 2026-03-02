@@ -1,0 +1,10 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:fundraiser
+strategy-errata-01,"MAL-TICKER","Name","Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-errata-01
+strategy-errata-02,"ST01-AAAAA",,"Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-errata-01
+strategy-errata-03,"ST02-AAAAA","Name",,"2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-errata-01
+strategy-errata-04,"ST03-AAAAA","Name","Description","2020/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-errata-01
+strategy-errata-05,"ST04-AAAAA","Name","Description","2027/01/01 10:00","2020/12/31 10:00","http://base.com",true,fundraiser-errata-01
+strategy-errata-06,"ST05-AAAAA","Name","Description","2028/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-errata-01
+strategy-errata-07,"ST06-AAAAA","Name","Description","2027/01/01 10:00","2027/12/31 10:00","esto-no-es-una-url-valida",true,fundraiser-errata-01
+strategy-errata-08,"ST08-AAAAA","Name","Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,
+strategy-errata-09,"ST09-AAAAA","Published Without Tactic","Este falla por el constraint del modelo de draftMode=false sin tactic asociada","2027/01/01 10:00","2027/12/31 10:00","http://base.com",false,fundraiser-errata-01

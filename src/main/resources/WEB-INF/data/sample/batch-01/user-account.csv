@@ -5,3 +5,11 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-fundraiser-01,true,"UserIdentity{name: 'Juan', surname: 'Fundraiser Base', email: 'juan@acme.com'}",fundraiser1,fundraiser1
+user-account-fundraiser-02,true,"UserIdentity{name: 'Ana', surname: 'Fundraiser Min', email: 'ana@acme.com'}",fundraiser2,fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Luis', surname: 'Fundraiser Nonlat', email: 'luis@acme.com'}",fundraiser3,fundraiser3
+user-account-fundraiser-04,true,"UserIdentity{name: 'Marta', surname: 'Fundraiser Inj', email: 'marta@acme.com'}",fundraiser4,fundraiser4
+user-account-fundraiser-05,true,"UserIdentity{name: 'Carlos', surname: 'Fundraiser 5', email: 'carlos@acme.com'}",fundraiser5,fundraiser5
+user-account-fundraiser-06,true,"UserIdentity{name: 'Elena', surname: 'Fundraiser 6', email: 'elena@acme.com'}",fundraiser6,fundraiser6
+user-account-fundraiser-07,true,"UserIdentity{name: 'Jorge', surname: 'Fundraiser 7', email: 'jorge@acme.com'}",fundraiser7,fundraiser7
+user-account-fundraiser-08,true,"UserIdentity{name: 'Lucia', surname: 'Fundraiser 8', email: 'lucia@acme.com'}",fundraiser8,fundraiser8

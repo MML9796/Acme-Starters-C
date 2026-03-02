@@ -1,0 +1,5 @@
+key,bank,statement,agent,key:userAccount
+fundraiser-errata-01,,"Statement base de prueba",true,user-account-errata-01
+fundraiser-errata-02,"Banco Base",,true,user-account-errata-01
+fundraiser-errata-03,"Banco Base","Statement base de prueba",,user-account-errata-01
+fundraiser-errata-04,"Banco Base","Statement base de prueba",true,

@@ -1,0 +1,15 @@
+key,name,notes,expectedPercentage,kind,key:strategy
+tactic-01,"Base Tactic","Base notes text",50.00,SUBTLE,strategy-01
+tactic-02,"T","Base notes text",50.00,SUBTLE,strategy-01
+tactic-03,"Täctic ñ 洛伦","Base notes text",50.00,SUBTLE,strategy-01
+tactic-04,"<script>alert()</script>","Base notes text",50.00,SUBTLE,strategy-01
+tactic-05,"Base Tactic","N",50.00,SUBTLE,strategy-01
+tactic-06,"Base Tactic","Nötes ñ 洛伦",50.00,SUBTLE,strategy-01
+tactic-07,"Base Tactic","<script>alert()</script>",50.00,SUBTLE,strategy-01
+tactic-08,"Base Tactic","Base notes text",0.00,SUBTLE,strategy-01
+tactic-09,"Base Tactic","Base notes text",100.00,SUBTLE,strategy-01
+tactic-10,"Base Tactic","Base notes text",0.01,SUBTLE,strategy-01
+tactic-11,"Base Tactic","Base notes text",99.99,SUBTLE,strategy-01
+tactic-12,"Base Tactic","Base notes text",50.00,AGGRESSIVE,strategy-01
+tactic-13,"Base Tactic","Base notes text",50.00,TENDER,strategy-01
+tactic-14,"Support Tactic","Para cumplir el constraint de estrategia",50.00,SUBTLE,strategy-12

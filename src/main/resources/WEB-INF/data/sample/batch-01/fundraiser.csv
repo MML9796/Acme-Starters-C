@@ -1,0 +1,9 @@
+key,bank,statement,agent,key:userAccount
+fundraiser-01,"Base Bank","Base statement text",true,user-account-fundraiser-01
+fundraiser-02,"B","Base statement text",true,user-account-fundraiser-02
+fundraiser-03,"Bänco Ñ 洛伦","Base statement text",true,user-account-fundraiser-03
+fundraiser-04,"<script>alert()</script>","Base statement text",true,user-account-fundraiser-04
+fundraiser-05,"Base Bank","S",true,user-account-fundraiser-05
+fundraiser-06,"Base Bank","Stätement ñ 洛伦",true,user-account-fundraiser-06
+fundraiser-07,"Base Bank","<script>alert()</script>",true,user-account-fundraiser-07
+fundraiser-08,"Base Bank","Base statement text",false,user-account-fundraiser-08

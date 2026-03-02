@@ -1,0 +1,4 @@
+key,enabled,identity,password,username
+user-account-errata-01,true,"UserIdentity{name: 'Juan', surname: 'Errata', email: 'juan@acme.com'}",,username1
+user-account-errata-02,true,"UserIdentity{name: 'Ana', surname: 'Errata', email: 'ana@acme.com'}",password1,
+user-account-errata-03,true,,password1,username1

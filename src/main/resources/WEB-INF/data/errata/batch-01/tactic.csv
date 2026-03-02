@@ -1,0 +1,8 @@
+key,name,notes,expectedPercentage,kind,key:strategy
+tactic-errata-01,,"Base notes text",50.00,SUBTLE,strategy-errata-01
+tactic-errata-02,"Base Tactic",,50.00,SUBTLE,strategy-errata-01
+tactic-errata-03,"Base Tactic","Base notes text",-10.50,SUBTLE,strategy-errata-01
+tactic-errata-04,"Base Tactic","Base notes text",110.00,SUBTLE,strategy-errata-01
+tactic-errata-05,"Base Tactic","Base notes text",,SUBTLE,strategy-errata-01
+tactic-errata-06,"Base Tactic","Base notes text",50.00,,strategy-errata-01
+tactic-errata-07,"Base Tactic","Base notes text",50.00,SUBTLE,
