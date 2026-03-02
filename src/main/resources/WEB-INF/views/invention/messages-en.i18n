@@ -1,0 +1,3 @@
+acme.validation.invention.duplicated-ticker.message= This ticker is already in use by another invention.
+acme.validation.invention.invalid-dates.message=startMoment/endMoment must be a valid time interval in future
+acme.validation.invention.existing-part.message=Inventions cannot be published unless they have at least one part

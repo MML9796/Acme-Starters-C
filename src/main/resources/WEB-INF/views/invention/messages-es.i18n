@@ -1,0 +1,3 @@
+acme.validation.invention.duplicated-ticker.message= Este Ticker ya está siendo utilizado.
+acme.validation.invention.invalid-dates.message= El momento de empezar y terminar debe ser un intervalo válido.
+acme.validation.invention.existing-part.message= Las invenciones no pueden ser publicadas sin al menos una parte.

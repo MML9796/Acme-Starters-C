@@ -23,7 +23,7 @@ import javax.validation.constraints.Size;
 @Size(min = 1, max = 255)
 public @interface ValidText {
 
-	String message() default "El texto debe tener entre 1 y 255 caracteres y no estar vacío";
+	String message() default "{acme.validation.text.invalid.message}";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
