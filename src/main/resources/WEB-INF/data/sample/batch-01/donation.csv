@@ -1,0 +1,24 @@
+key,name,notes,money,kind,key:sponsorship
+
+donation-01,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+
+donation-02,"S","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+donation-03,"So","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+donation-04,"Iniciativa Global para la Reducción de Emisiones de Carbono en la Industria","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+donation-05,"Iniciativa Global para la Reducción de Emisiones de Carbono en la Industri","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+donation-06,"ลเร็ม อิปซั","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+
+donation-07,"Solar Cell","Este proyecto de reforestación masiva en la zona norte tiene como objetivo plantar diez mil árboles autóctonos en un periodo de tres años, promoviendo la biodiversidad local, recuperando los suelos degradados y creando nuevos espacios de recreo y ocio....",100.00 EUR,REWARDED,sponsorship-01
+donation-08,"Solar Cell","Este proyecto de reforestación masiva en la zona norte tiene como objetivo plantar diez mil árboles autóctonos en un periodo de tres años, promoviendo la biodiversidad local, recuperando los suelos degradados y creando nuevos espacios de recreo y ocio...",100.00 EUR,REWARDED,sponsorship-01
+donation-09,"Solar Cell","H",100.00 EUR,REWARDED,sponsorship-01
+donation-10,"Solar Cell","Hi",100.00 EUR,REWARDED,sponsorship-01
+
+donation-11,"Solar Cell","High-efficiency solar cell for panels",0.00 EUR,REWARDED,sponsorship-01
+donation-12,"Solar Cell","High-efficiency solar cell for panels",0.01 EUR,REWARDED,sponsorship-01
+donation-13,"Solar Cell","High-efficiency solar cell for panels",999999.99 EUR,REWARDED,sponsorship-01
+donation-14,"Solar Cell","High-efficiency solar cell for panels",1000000.00 EUR,REWARDED,sponsorship-01
+
+donation-15,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,ALTRUIST,sponsorship-01
+donation-16,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,CELEBRATED,sponsorship-01
+
+
