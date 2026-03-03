@@ -1,0 +1,1 @@
+acme.validation.header.invalid.message = The header must be between 1 and 75 characters long and must not be empty

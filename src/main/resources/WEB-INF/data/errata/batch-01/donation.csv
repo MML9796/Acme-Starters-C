@@ -1,0 +1,11 @@
+key,name,notes,money,kind,key:sponsorship
+
+donation-01,"","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+donation-02,"Iniciativa Global para la Reducción de Emisiones de Carbono en la Industria.","High-efficiency solar cell for panels",100.00 EUR,REWARDED,sponsorship-01
+
+donation-03,"Solar Cell","",100.00 EUR,REWARDED,sponsorship-01
+donation-04,"Solar Cell","Este proyecto de reforestación masiva en la zona norte tiene como objetivo plantar diez mil árboles autóctonos en un periodo de tres años, promoviendo la biodiversidad local, recuperando los suelos degradados y creando nuevos espacios de recreo y ocio.....",100.00 EUR,REWARDED,sponsorship-01
+
+donation-05,"Solar Cell","High-efficiency solar cell for panels",,REWARDED,sponsorship-01
+donation-06,"Solar Cell","High-efficiency solar cell for panels",-0.01 EUR,REWARDED,sponsorship-01
+donation-07,"Solar Cell","High-efficiency solar cell for panels",1000000.01 EUR,REWARDED,sponsorship-01

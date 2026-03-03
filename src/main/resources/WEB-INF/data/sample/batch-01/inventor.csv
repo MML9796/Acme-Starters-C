@@ -1,0 +1,18 @@
+key,key:userAccount,bio,keyWords,licensed
+inventor-01,user-account-inventor-01,"Industrial inventor focused on sustainable energy storage systems","energy,storage,batteries",true
+
+inventor-02,user-account-inventor-02,"I","energy,storage,batteries",true
+inventor-03,user-account-inventor-03,"Io","energy,storage,batteries",true
+inventor-04,user-account-inventor-04,"Senior inventor researching scalable renewable energy infrastructures for urban environments, collaborating with multidisciplinary engineering teams to design efficient storage solutions adaptable to modern smart cities and global industrial applications","energy,storage,batteries",true
+inventor-05,user-account-inventor-05,"Senior inventor researching scalable renewable energy infrastructures for urban environments, collaborating with multidisciplinary engineering teams to design efficient storage solutions adaptable to modern smart cities and global industrial applications.","energy,storage,batteries",true
+inventor-06,user-account-inventor-06,"aaaa โลเร็ม อิปซัม 洛伦·伊普森 لوريم إيبسوم","energy,storage,batteries",true
+inventor-07,user-account-inventor-07,"<marquee>Hacked</marquee> <script>alert('Hacked!');</script> ' or 'A' = 'A","energy,storage,batteries",true
+
+inventor-08,user-account-inventor-08,"Industrial inventor focused on sustainable energy storage systems","e",true
+inventor-09,user-account-inventor-09,"Industrial inventor focused on sustainable energy storage systems","ai",true
+inventor-10,user-account-inventor-10,"Industrial inventor focused on sustainable energy storage systems","renewable-energy,distributed-storage,grid-optimization,industrial-electronics,smart-infrastructure,advanced-materials,research-development,energy-transition,efficiency-modeling,sustainable-innovation,power-grid-stability,clean-tech-solutions,urban-system",true
+inventor-11,user-account-inventor-11,"Industrial inventor focused on sustainable energy storage systems","renewable-energy,distributed-storage,grid-optimization,industrial-electronics,smart-infrastructure,advanced-materials,research-development,energy-transition,efficiency-modeling,sustainable-innovation,power-grid-stability,clean-tech-solutions,urban-system.",true
+inventor-12,user-account-inventor-12,"Industrial inventor focused on sustainable energy storage systems","aaaa โลเร็ม อิปซัม 洛伦·伊普森 لوريم إيبسوم",true
+inventor-13,user-account-inventor-13,"Industrial inventor focused on sustainable energy storage systems","<marquee>Hacked</marquee> <script>alert('Hacked!');</script> ' or 'A' = 'A",true
+
+inventor-14,user-account-inventor-14,"Industrial inventor focused on sustainable energy storage systems","energy,storage,batteries",false

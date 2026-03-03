@@ -9,12 +9,20 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import acme.validators.SponsorshipValidator;
+import acme.validators.MoneyValidator2;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = SponsorshipValidator.class)
-public @interface ValidSponsorship {
+@Constraint(validatedBy = MoneyValidator2.class)
+
+public @interface ValidMoney2 {
+
+	// Custom properties ------------------------------------------------------
+
+	double min() default Double.NaN;
+	double max() default Double.NaN;
+
+	// Standard validation properties -----------------------------------------
 
 	String message() default "";
 

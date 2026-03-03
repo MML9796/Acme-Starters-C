@@ -1,0 +1,1 @@
+acme.validation.text.invalid.message = The text must be between 1 and 255 characters long and must not be empty

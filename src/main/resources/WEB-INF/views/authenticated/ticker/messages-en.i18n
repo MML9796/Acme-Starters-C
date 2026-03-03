@@ -1,0 +1,1 @@
+acme.validation.ticker.invalid.message = The text must follow the pattern AB12-ABCDE and cannot be empty
