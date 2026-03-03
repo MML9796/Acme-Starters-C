@@ -1,0 +1,46 @@
+key,key:inventor,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+invention-01,inventor-01,"AB01-ENERG1","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+
+invention-02,inventor-01,"AB01-ENERG","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-03,inventor-01,"AB01-111111","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-04,inventor-01,"EF03-AAAAAAAA","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-05,inventor-01,"EF03-PO6ER37Y0","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-06,inventor-01,"EF03-PO6ER37Y0A","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+
+invention-07,inventor-01,"AB01-ENERG2","S","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-08,inventor-01,"AB01-ENERG3","So","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-09,inventor-01,"AB01-ENERG4","Solar Battery Pack: Efficient energy storage for modern urban environments","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-10,inventor-01,"AB01-ENERG5","Solar Battery Pack: Efficient energy storage for modern urban environments.","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-11,inventor-01,"AB01-ENERG6","aaaa โลเร็ม อิปซัม 洛伦·伊普森 لوريم إيبسوم","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-12,inventor-01,"AB01-ENERG7","<marquee>Hac</marquee> <script>al('Hacked!');</script> ' or 'A' = 'A","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+
+invention-13,inventor-01,"AB01-ENERG8","Solar Battery Pack","I","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-14,inventor-01,"AB01-ENERG9","Solar Battery Pack","In","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-15,inventor-01,"AB01-ENERG10","Solar Battery Pack","Industrial solar battery pack to store renewable energy  providing high-capacity backup for critical infrastructures  optimizing grid performance  and ensuring seamless power delivery within modern smart cities environments and global sustainable systems","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-16,inventor-01,"AB01-ENERG11","Solar Battery Pack","Industrial solar battery pack to store renewable energy  providing high-capacity backup for critical infrastructures  optimizing grid performance  and ensuring seamless power delivery within modern smart cities environments and global sustainable systems.","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-17,inventor-01,"AB01-ENERG12","Solar Battery Pack","aaaa โลเร็ม อิปซัม 洛伦·伊普森","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-18,inventor-01,"AB01-ENERG13","Solar Battery Pack","<marquee>Hac</marquee> <script>al('Hacked!');</script> ' or 'A' = 'A","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+
+invention-19,inventor-01,"AB01-ENERG14","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2025/01/01 00:00","2025/01/01 00:01","https://example.com/product1",true
+invention-20,inventor-01,"AB01-ENERG15","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2025/01/01 00:01","2025/01/01 00:02","https://example.com/product1",true
+invention-21,inventor-01,"AB01-ENERG16","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2200/12/31 23:58","2200/12/31 23:59","https://example.com/product1",true
+invention-22,inventor-01,"AB01-ENERG17","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2200/12/31 23:57","2200/12/31 23:58","https://example.com/product1",true
+
+invention-23,inventor-01,"AB01-ENERG18","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://a.b",true
+invention-24,inventor-01,"AB01-ENERG19","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",true
+invention-25,inventor-01,"AB01-ENERG20","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",true
+invention-26,inventor-01,"AB01-ENERG21","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://www.lorem-ipsum.org",true
+invention-27,inventor-01,"AB01-ENERG22","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org/dolor/sit.html",true
+invention-28,inventor-01,"AB01-ENERG23","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org/dolor/sit.html#dolor",true
+invention-29,inventor-01,"AB01-ENERG24","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org?a=1&b=2",true
+invention-30,inventor-01,"AB01-ENERG25","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org?",true
+invention-31,inventor-01,"AB01-ENERG26","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org?a",true
+invention-32,inventor-01,"AB01-ENERG27","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org?a&b",true
+invention-33,inventor-01,"AB01-ENERG28","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org/",true
+invention-34,inventor-01,"AB01-ENERG29","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org/a",true
+invention-35,inventor-01,"AB01-ENERG30","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org/a/b",true
+invention-36,inventor-01,"AB01-ENERG31","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org/a/b?",true
+invention-37,inventor-01,"AB01-ENERG32","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://example.org/a/b?a&b",true
+invention-38,inventor-01,"AB01-ENERG33","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org",true
+invention-39,inventor-01,"AB01-ENERG34","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true
+invention-40,inventor-02,"AB01-ENERG35","Solar Battery Pack","Industrial solar battery pack to store renewable energy","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true

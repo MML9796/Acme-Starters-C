@@ -1,2 +1,4 @@
 key,enabled,identity,password,username
 user-account-fundraiser-01,true,"UserIdentity{name: 'Juan', surname: 'Fundraiser', email: 'juan@acme.com'}",fundraiser1,fundraiser1
+user-account-sponsor-01,true,"UserIdentity{name: 'Nuria', surname: 'Martin', email: 'nuria@acme.com'}",sponsor1,sponsor1
+user-account-inventor-01,true,"UserIdentity{name: 'Elena', surname: 'Torres', email: 'elena@acme.com'}",inventor1,inventor1

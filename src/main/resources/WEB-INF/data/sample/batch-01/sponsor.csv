@@ -1,0 +1,4 @@
+key,address,im,gold,key:userAccount
+sponsor-01,"C/ Reina Mercedes, 1","nuria@im.com",true,user-account-sponsor-01
+sponsor-02,"Av. La Palmera, 45","miguel@im.com",false,user-account-sponsor-02
+sponsor-03,"C/ Betis, 10","julia@im.com",true,user-account-sponsor-03

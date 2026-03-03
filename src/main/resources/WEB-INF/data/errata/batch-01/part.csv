@@ -1,0 +1,13 @@
+key,key:invention,name,description,cost,kind
+part-00,invention-01,"","High-efficiency solar cell for panels",100.00 EUR,CORE
+part-01,invention-01," ","High-efficiency solar cell for panels",100.00 EUR,CORE
+part-02,invention-01,"Solar Cell: Advanced high-efficiency energy capture for urban environments. ","High-efficiency solar cell for panels",100.00 EUR,CORE
+
+part-03,invention-01,"Solar Cell","",100.00 EUR,CORE
+part-04,invention-01,"Solar Cell"," ",100.00 EUR,CORE
+part-05,invention-01,"Solar Cell","High-efficiency  solar cell for panels, designed to maximize energy capture through advanced materials, enhancing performance in urban environments,  optimizing power conversion for smart grid integration and sustainable industrial energy infrastructures. ",100.00 EUR,CORE
+
+part-06,invention-01," ","High-efficiency solar cell for panels"," ",CORE
+part-07,invention-01," ","High-efficiency solar cell for panels",-0.01 EUR,CORE
+part-08,invention-01," ","High-efficiency solar cell for panels",1000000.01 EUR,CORE
+part-09,invention-01," ","High-efficiency solar cell for panels",100.00 USD,CORE
