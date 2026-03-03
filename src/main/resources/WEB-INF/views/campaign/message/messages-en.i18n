@@ -1,0 +1,4 @@
+# Campaign Validation Errors
+acme.validation.campaign.one-milestone.message = A campaign cannot be published unless it has at least one milestone.
+acme.validation.campaign.invalid-time-interval.message = A campaign cannot be published with an invalid time interval. The end date must be after the start date.
+acme.validation.campaign.duplicated-ticker.message = This ticker is already in use by another campaign.

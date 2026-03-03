@@ -1,8 +1,6 @@
 
 package acme.validators;
 
-import java.util.List;
-
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.entities.invention.Invention;
 import acme.entities.invention.InventionRepository;
-import acme.entities.part.Part;
 import acme.validation.ValidInvention;
 
 @Validator
@@ -30,32 +27,40 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 	public boolean isValid(final Invention invention, final ConstraintValidatorContext context) {
 		assert context != null;
 
-		boolean resultado;
+		boolean result;
 
 		if (invention == null)
-			resultado = true;
+			result = true;
 		else {
 
 			if (!invention.getDraftMode()) {
-
-				boolean fechaCorrecta;
-				fechaCorrecta = invention.getEndMoment().after(invention.getStartMoment());
-
-				super.state(context, fechaCorrecta, "endMoment", "startMoment/endMoment must be a valid time interval in future");
-
-				boolean hasParts = true;
-
-				if (invention.getId() != 0) {
-					List<Part> parts = this.repository.findPartsByInventionId(invention.getId());
-					hasParts = !parts.isEmpty();
+				{
+					boolean uniqueInvention;
+					Invention existingInvention;
+					existingInvention = this.repository.findInventionByTicker(invention.getTicker());
+					uniqueInvention = existingInvention == null || existingInvention.equals(invention);
+					super.state(context, uniqueInvention, "ticker", "acme.validation.invention.duplicated-ticker.message");
 				}
 
-				super.state(context, hasParts, "*", "Inventions cannot be published unless they have at least one part");
+				{
+					if (invention.getEndMoment() != null && invention.getStartMoment() != null) {
+						boolean correctDates;
+						correctDates = invention.getEndMoment().after(invention.getStartMoment());
+						super.state(context, correctDates, "endMoment", "acme.validation.invention.invalid-dates.message");
+					}
+				}
+
+				{
+					boolean hasParts = true;
+					Integer parts = this.repository.findPartsByInventionId(invention.getId());
+					hasParts = parts > 0 && parts != null;
+					super.state(context, hasParts, "*", "acme.validation.invention.existing-part.message");
+				}
 			}
 
-			resultado = !super.hasErrors(context);
+			result = !super.hasErrors(context);
 		}
 
-		return resultado;
+		return result;
 	}
 }

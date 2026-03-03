@@ -9,9 +9,9 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.ValidMoney;
 import acme.entities.invention.Invention;
 import acme.validation.ValidHeader;
+import acme.validation.ValidMoney2;
 import acme.validation.ValidText;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,8 +38,8 @@ public class Part extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoney(min = 0.0)
 	@Column
+	@ValidMoney2(min = 0.0)
 	private Money				cost;
 
 	@Mandatory

@@ -23,7 +23,7 @@ import javax.validation.constraints.Pattern;
 @Pattern(regexp = "^[A-Z]{2}[0-9]{2}-\\w{5,10}$")
 public @interface ValidTicker {
 
-	String message() default "El texto debe cumplir el patron AB12-ABCDE y no estar vacío";
+	String message() default "{acme.validation.ticker.invalid.message}";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

@@ -31,14 +31,31 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			result = true;
 		else {
 			if (!campaign.getDraftMode()) {
-				boolean oneMilestone;
-				Integer totalMilestones = this.repository.totalMilestoneByCamapaignId(campaign.getId());
-				oneMilestone = totalMilestones == null || totalMilestones >= 1;
-				super.state(context, oneMilestone, "milestone", "you can't be published unless they have at least one milestone ");
+				{
+					boolean oneMilestone;
+					Integer totalMilestones = this.repository.totalMilestoneByCamapaignId(campaign.getId());
+					oneMilestone = totalMilestones == null || totalMilestones >= 1;
+					super.state(context, oneMilestone, "milestone", "acme.validation.campaign.one-milestone.message");
 
-				boolean timeCorrect;
-				timeCorrect = campaign.getEndMoment().after(campaign.getStartMoment());
-				super.state(context, timeCorrect, "endMoment", "you can't be published whit an invalid time interval ");
+				}
+				{
+					if (campaign.getEndMoment() != null && campaign.getStartMoment() != null) {
+						boolean timeCorrect;
+						timeCorrect = campaign.getEndMoment().after(campaign.getStartMoment());
+						super.state(context, timeCorrect, "endMoment", "acme.validation.campaign.invalid-time-interval.message ");
+
+					}
+				}
+				{
+					boolean uniqueCampaing;
+					Campaign existingCampaing;
+
+					existingCampaing = this.repository.findCampaignByTicker(campaign.getTicker());
+					uniqueCampaing = existingCampaing == null || existingCampaing.equals(campaign);
+
+					super.state(context, uniqueCampaing, "ticker", "acme.validation.campaign.duplicated-ticker.message");
+
+				}
 			}
 			result = !super.hasErrors(context);
 		}
