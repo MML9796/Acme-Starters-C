@@ -5,3 +5,17 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-inventor-01,true,"UserIdentity{name: 'Elena', surname: 'Torres', email: 'elena@acme.com'}",inventor1,inventor1
+user-account-inventor-02,true,"UserIdentity{name: 'Hiro', surname: '山本', email: 'hiro@acme.com'}",inventor2,inventor2
+user-account-inventor-03,true,"UserIdentity{name: 'Omar', surname: 'الحكيم', email: 'omar@acme.com'}",inventor3,inventor3
+user-account-inventor-04,true,"UserIdentity{name: 'Lucía', surname: 'Fernández', email: 'lucia@acme.com'}",inventor4,inventor4
+user-account-inventor-05,true,"UserIdentity{name: 'Noah', surname: 'Müller', email: 'noah@acme.com'}",inventor5,inventor5
+user-account-inventor-06,true,"UserIdentity{name: 'Anya', surname: 'Кузнецова', email: 'anya@acme.com'}",inventor6,inventor6
+user-account-inventor-07,true,"UserIdentity{name: 'Wei', surname: '王', email: 'wei@acme.com'}",inventor7,inventor7
+user-account-inventor-08,true,"UserIdentity{name: 'Sara', surname: 'Benítez', email: 'sara@acme.com'}",inventor8,inventor8
+user-account-inventor-09,true,"UserIdentity{name: 'Lucas', surname: 'Dubois', email: 'lucas@acme.com'}",inventor9,inventor9
+user-account-inventor-10,true,"UserIdentity{name: 'Fatima', surname: 'الزهرة', email: 'fatima@acme.com'}",inventor10,inventor10
+user-account-inventor-11,true,"UserIdentity{name: 'Erik', surname: 'Ångström', email: 'erik@acme.com'}",inventor11,inventor11
+user-account-inventor-12,true,"UserIdentity{name: 'Sofía', surname: 'Nakamura', email: 'sofia@acme.com'}",inventor12,inventor12
+user-account-inventor-13,true,"UserIdentity{name: 'Ivan', surname: 'Petrov', email: 'ivan@acme.com'}",inventor13,inventor13
+user-account-inventor-14,true,"UserIdentity{name: 'Marta', surname: 'López', email: 'marta@acme.com'}",inventor14,inventor14
