@@ -9,6 +9,6 @@
 	<acme:form-textbox code="any.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-textbox code="any.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-textbox code="any.invention.form.label.moreInfo" path="moreInfo"/>
-	<acme:button code="any.invention.button.part" action="/any/part/list?inventionId=${id}"/>
+	<acme:button code="any.invention.button.parts" action="/any/part/list?inventionId=${id}"/>
 	<acme:button code="any.invention.button.inventor" action="/any/inventor/show?id=${inventorId}"/>
 </acme:form>
