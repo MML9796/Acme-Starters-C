@@ -1,6 +1,7 @@
 
 package acme.entities.audit_reports;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,6 +19,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.realms.Auditor;
@@ -82,22 +84,29 @@ public class AuditReport extends AbstractEntity {
 	private AuditReportRepository	repository;
 
 
+	@Mandatory
+	@Valid
 	@Transient
 	public Double getMonthsActive() {
 		Double result;
 
-		result = MomentHelper.computeDuration(this.getStartMoment(), this.getEndMoment()).toDays() / 30.0;
+		if (this.getStartMoment() != null && this.getEndMoment() != null)
+			result = MomentHelper.computeDifference(this.getStartMoment(), this.getEndMoment(), ChronoUnit.MONTHS);
+		else
+			result = null;
 
 		return result;
 	}
 
+	@Mandatory
+	@ValidNumber(min = 0)
 	@Transient
 	public Integer getHours() {
 		Integer result;
 		Integer wrapper;
 
 		wrapper = this.repository.computeHours(this.getId());
-		result = wrapper == null ? 0 : wrapper.intValue();
+		result = wrapper == null ? 0 : wrapper;
 
 		return result;
 	}

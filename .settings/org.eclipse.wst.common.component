@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                            
+    
+    
     
     
     
@@ -80,7 +82,9 @@
     
     
     <wb-module deploy-name="Acme-Starters-C">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        
+        
         
         
         
@@ -160,7 +164,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        
+        
         
         
         
@@ -243,7 +249,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        
+        
         
         
         
@@ -310,7 +318,9 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                
+        
+        
         
         
         
@@ -342,7 +352,9 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -351,15 +363,19 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
-                                        
+                                                        
+        
+        
         
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/.apt_generated"/>
-        <dependent-module archiveName="Acme-Framework-26.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Acme-Framework-26.2.0/Acme-Framework-26.2.0">
+        <dependent-module archiveName="Acme-Framework-26.3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Acme-Framework-26.3.0/Acme-Framework-26.3.0">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        
+        
         
         
         
@@ -439,9 +455,13 @@
         
         
         <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
-                
+                                
+        
+        
         <property name="context-root" value="Acme-Starters"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    
+    
     
     
     
@@ -522,7 +542,9 @@
     
     
     </wb-module>
-                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                        
+
+
 
 
 

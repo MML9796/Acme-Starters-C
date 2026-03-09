@@ -10,7 +10,7 @@ import acme.client.repositories.AbstractRepository;
 public interface AuditReportRepository extends AbstractRepository {
 
 	@Query("select sum(s.hours) from AuditSection s where s.auditReport.id = :id")
-	int computeHours(int id);
+	Integer computeHours(int id);
 
 	@Query("select ar from AuditReport ar where ar.ticker = :ticker")
 	AuditReport findAuditReportByTicker(String ticker);
