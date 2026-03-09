@@ -33,6 +33,6 @@ public class AnyInventorShowService extends AbstractService<Any, Inventor> {
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.inventor, "bio", "keyWords", "licensed");
+		super.unbindObject(this.inventor, "userAccount.username", "bio", "keyWords", "licensed");
 	}
 }

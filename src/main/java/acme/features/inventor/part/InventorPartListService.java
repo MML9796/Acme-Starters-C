@@ -1,32 +1,31 @@
 
-package acme.features.any.part;
+package acme.features.inventor.part;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.part.Part;
-import acme.features.any.invention.AnyInventionRepository;
+import acme.features.inventor.invention.InventorInventionRepository;
+import acme.realms.Inventor;
 
 @Service
-public class AnyPartListService extends AbstractService<Any, Part> {
+public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	//Internal state
 	@Autowired
-	private AnyPartRepository		repository;
+	private InventorPartRepository		repository;
 	@Autowired
-	private AnyInventionRepository	inventionRepository;
-	private Collection<Part>		part;
+	private InventorInventionRepository	inventionRepository;
+	private Collection<Part>			part;
 
 
 	//AbstractService interface
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("inventionId", int.class);
 		this.part = this.repository.findAllPartByInventionId(id);
 	}
@@ -35,7 +34,8 @@ public class AnyPartListService extends AbstractService<Any, Part> {
 	public void authorise() {
 		boolean status;
 		int id = super.getRequest().getData("inventionId", int.class);
-		status = !this.inventionRepository.findInventionById(id).getDraftMode();
+		int accountId = super.getRequest().getPrincipal().getAccountId();
+		status = this.inventionRepository.findInventionById(id).getInventor().getUserAccount().getId() == accountId;
 		super.setAuthorised(status);
 
 	}

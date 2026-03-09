@@ -1,0 +1,10 @@
+inventor.part.list.title = Lista de partes
+inventor.part.form.title = Detalles de la parte
+
+inventor.part.list.label.name = Nombre
+inventor.part.list.label.description = Descripcion
+
+inventor.part.form.label.name = Nombre
+inventor.part.form.label.description = Descripcion
+inventor.part.form.label.cost = Coste
+inventor.part.form.label.kind = Tipo

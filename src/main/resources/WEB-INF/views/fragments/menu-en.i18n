@@ -44,3 +44,8 @@ master.menu.user-account.consumer-profile = Consumer profile
 
 master.menu.any = Any
 master.menu.invention.list = Invention list
+
+#master.menu.inventor ##############################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = My inventions

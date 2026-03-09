@@ -1,0 +1,18 @@
+inventor.invention.list.title = Lista de inventos
+inventor.invention.form.title = Detalles del invento
+
+inventor.invention.list.label.ticker = Ticket
+inventor.invention.list.label.name = Nombre
+inventor.invention.list.label.startMoment = Comienzo
+inventor.invention.list.label.endMoment = Fin
+
+inventor.invention.form.label.ticker = Ticket
+inventor.invention.form.label.name = Nombre
+inventor.invention.form.label.description = Descripción
+inventor.invention.form.label.startMoment = Comienzo
+inventor.invention.form.label.endMoment = Fin
+inventor.invention.form.label.monthsActive = Meses activo
+inventor.invention.form.label.cost = Coste
+inventor.invention.form.label.moreInfo = Más Info
+inventor.invention.button.parts = Partes
+inventor.invention.button.inventor= Inventor

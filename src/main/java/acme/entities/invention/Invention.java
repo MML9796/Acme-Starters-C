@@ -93,7 +93,7 @@ public class Invention extends AbstractEntity {
 	}
 
 	@Mandatory
-	@ValidMoney2(min = 0.0)
+	@ValidMoney2(min = 0.0, max = 1000000000)
 	@Transient
 	public Money getCost() {
 
