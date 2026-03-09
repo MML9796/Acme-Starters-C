@@ -17,4 +17,5 @@ public interface AnyMilestoneRepository extends AbstractRepository {
 
 	@Query("select m from Milestone m where m.id=:id")
 	Milestone findMilestoneById(int id);
+
 }

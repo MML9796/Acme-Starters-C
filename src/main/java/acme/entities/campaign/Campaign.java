@@ -18,6 +18,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Spokesperson;
 import acme.validation.ValidCampaign;
@@ -78,13 +79,16 @@ public class Campaign extends AbstractEntity {
 	//Derived attributes
 
 
+	@Valid
 	@Transient
-	public double getMonthsActive() {
+	public Double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
 		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
+	@ValidNumber(min = 0.0, max = 1000000.0)
+	@Transient
 	public Double getEffort() {
 		Double total = this.campaignRepository.sumEffortByCampaignId(this.getId());
 		return total != null ? total : 0.0;

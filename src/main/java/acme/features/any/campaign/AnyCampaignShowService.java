@@ -14,7 +14,7 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 	//Internal state
 	@Autowired
 	private AnyCampaignRepository	repository;
-	private Campaign					campaign;
+	private Campaign				campaign;
 
 
 	//AbstractService interface
@@ -37,7 +37,7 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "monthsActive", "effort", "moreInfo");
 		super.unbindGlobal("id", this.campaign.getId());
 		super.unbindGlobal("spokespersonId", this.campaign.getSpokesperson().getId());
 	}
