@@ -25,7 +25,7 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 
 	@Override
 	protected void initialise(final ValidAuditReport annotation) {
-		assert annotation == null;
+		assert annotation != null;
 	}
 
 	@Override
@@ -46,19 +46,28 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 
 				super.state(context, uniqueAuditReport, "ticker", "acme.validation.audit-report.duplicated-ticker.message");
 			}
+
 			{
-				boolean atLeastOneAuditSection;
-				int existingAuditSections;
+				if (auditReport.getDraftMode() != null && !auditReport.getDraftMode()) {
+					boolean atLeastOneAuditSection;
+					int existingAuditSections;
 
-				existingAuditSections = this.repository.findAuditSectionsSizeById(auditReport.getId());
-				atLeastOneAuditSection = existingAuditSections >= 1;
+					existingAuditSections = this.repository.findAuditSectionsSizeById(auditReport.getId());
+					atLeastOneAuditSection = existingAuditSections >= 1;
 
-				super.state(context, atLeastOneAuditSection, "*", "acme.validation.audit-report.no-audit-sections.message");
+					super.state(context, atLeastOneAuditSection, "*", "acme.validation.audit-report.no-audit-sections.message");
+				}
 			}
 			{
 				boolean correctStartEndFutureInterval;
 
-				correctStartEndFutureInterval = MomentHelper.isFuture(auditReport.getStartMoment()) && MomentHelper.isAfter(auditReport.getEndMoment(), auditReport.getStartMoment());
+				if (auditReport.getStartMoment() != null && auditReport.getEndMoment() != null) {
+					if (auditReport.getDraftMode() != null && auditReport.getDraftMode())
+						correctStartEndFutureInterval = MomentHelper.isAfter(auditReport.getEndMoment(), auditReport.getStartMoment());
+					else
+						correctStartEndFutureInterval = MomentHelper.isFuture(auditReport.getStartMoment()) && MomentHelper.isAfter(auditReport.getEndMoment(), auditReport.getStartMoment());
+				} else
+					correctStartEndFutureInterval = false;
 
 				super.state(context, correctStartEndFutureInterval, "startMoment, endMoment", "acme.validation.audit-report.invalid-start-end-interval.message");
 			}

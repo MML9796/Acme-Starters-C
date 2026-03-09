@@ -1,5 +1,5 @@
 
-package acme.entities.audit_sections;
+package acme.entities.audit_reports;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,6 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidNumber;
 import acme.datatypes.SectionKind;
-import acme.entities.audit_reports.AuditReport;
 import acme.validation.ValidHeader;
 import acme.validation.ValidText;
 import lombok.Getter;
@@ -38,7 +37,7 @@ public class AuditSection extends AbstractEntity {
 	private String				notes;
 
 	@Mandatory
-	@ValidNumber(min = 0)
+	@ValidNumber(min = 0, max = 100000)
 	@Column
 	private Integer				hours;
 

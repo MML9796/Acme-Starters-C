@@ -20,7 +20,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
-import acme.entities.auditors.Auditor;
+import acme.realms.Auditor;
 import acme.validation.ValidAuditReport;
 import acme.validation.ValidHeader;
 import acme.validation.ValidText;

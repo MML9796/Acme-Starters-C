@@ -1,0 +1,62 @@
+key,ticker,name,description,start-moment,end-moment,more-info,draft-mode,key:auditor
+# base entity,""
+audit-report-01,TK00-000001,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# ticker,"","","","","","","",""
+audit-report-02,AB01-12345,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-03,MN55-ABCDEFGHI,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-04,ZY98-abcdefghij,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# name,"","","","","","","",""
+audit-report-05,TK00-000005,L,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-06,TK00-000006,Lo,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-07,TK00-000007,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-08,TK00-000008,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-09,TK00-000009,โลเร็ม อิปซัม,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-10,TK00-000010,لوريم إيبسوم,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-11,TK00-000011,洛伦·伊普森,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-12,TK00-000012,<marquee>Hacked</marquee>,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-13,TK00-000013,<script>alert(‘Hacked!’);</script>,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-14,TK00-000014,"<noscript><p title=""</noscript><img src=x onerror=alert(1)>"">",example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-15,TK00-000015,' or 'A' = 'A,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-16,TK00-000016,'; DROP TABLE user_account;--,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-17,TK00-000017,'; SHUTDOWN;--,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-18,TK00-000018,'; EXEC xp_cmdshell('ping attacker.com');--,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# description,"","","","","","","",""
+audit-report-19,TK00-000019,example,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-20,TK00-000020,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-21,TK00-000021,example,Lo,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-22,TK00-000022,example,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-23,TK00-000023,example,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-24,TK00-000024,example,โลเร็ม อิปซัม,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-25,TK00-000025,example,لوريم إيبسوم,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-26,TK00-000026,example,洛伦·伊普森,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-27,TK00-000027,example,<marquee>Hacked</marquee>,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-28,TK00-000028,example,<script>alert(‘Hacked!’);</script>,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-29,TK00-000029,example,"<noscript><p title=""</noscript><img src=x onerror=alert(1)>"">",2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-30,TK00-000030,example,' or 'A' = 'A,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-31,TK00-000031,example,'; DROP TABLE user_account;--,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-32,TK00-000032,example,'; SHUTDOWN;--,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-33,TK00-000033,example,'; EXEC xp_cmdshell('ping attacker.com');--,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# moments,"","","","","","","",""
+audit-report-34,TK00-000034,example,example,2025/01/01 00:00,2025/01/01 00:01,http://lorem.com/ipsum,true,auditor-01
+audit-report-35,TK00-000035,example,example,2200/12/31 23:58,2200/12/31 23:59,http://lorem.com/ipsum,true,auditor-01
+# more-info,"","","","","","","",""
+audit-report-36,TK00-000036,example,example,2025/09/01 10:00,2025/09/01 12:00,http://a.b,true,auditor-01
+audit-report-37,TK00-000037,example,example,2025/09/01 10:00,2025/09/01 12:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",true,auditor-01
+audit-report-38,TK00-000038,example,example,2025/09/01 10:00,2025/09/01 12:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",true,auditor-01
+audit-report-39,TK00-000039,example,example,2025/09/01 10:00,2025/09/01 12:00,http://www.lorem-ipsum.org,true,auditor-01
+audit-report-40,TK00-000040,example,example,2025/09/01 10:00,2025/09/01 12:00,https://www.lorem-ipsum.org,true,auditor-01
+audit-report-41,TK00-000041,example,example,2025/09/01 10:00,2025/09/01 12:00,http://www.lorem-ipsum.org/dolor/sit.html,true,auditor-01
+audit-report-42,TK00-000042,example,example,2025/09/01 10:00,2025/09/01 12:00,http://www.lorem-ipsum.org/dolor/sit.html#dolor,true,auditor-01
+audit-report-43,TK00-000043,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org?a=1&b=2,true,auditor-01
+audit-report-44,TK00-000044,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org?,true,auditor-01
+audit-report-45,TK00-000045,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org?a,true,auditor-01
+audit-report-46,TK00-000046,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org?a&b,true,auditor-01
+audit-report-47,TK00-000047,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org/,true,auditor-01
+audit-report-48,TK00-000048,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org/a,true,auditor-01
+audit-report-49,TK00-000049,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org/a/b,true,auditor-01
+audit-report-50,TK00-000050,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org/a/b?,true,auditor-01
+audit-report-51,TK00-000051,example,example,2025/09/01 10:00,2025/09/01 12:00,http://example.org/a/b?a&b,true,auditor-01
+audit-report-52,TK00-000052,example,example,2025/09/01 10:00,2025/09/01 12:00,"",true,auditor-01
+audit-report-53,TK00-000053,example,example,2025/09/01 10:00,2025/09/01 12:00,null,true,auditor-01
+# draft-mode,"","","","","","","",""
+audit-report-54,TK00-000054,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,false,auditor-01
