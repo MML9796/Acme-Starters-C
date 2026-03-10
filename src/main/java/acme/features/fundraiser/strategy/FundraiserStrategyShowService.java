@@ -1,19 +1,19 @@
 
-package acme.features.any.strategy;
+package acme.features.fundraiser.strategy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
+import acme.realms.Fundraiser;
 
 @Service
-public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
+public class FundraiserStrategyShowService extends AbstractService<Fundraiser, Strategy> {
 
 	@Autowired
-	private AnyStrategyRepository	repository;
-	private Strategy				strategy;
+	private FundraiserStrategyRepository	repository;
+	private Strategy						strategy;
 
 
 	@Override
@@ -21,14 +21,15 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		this.strategy = this.repository.findOneStrategyById(id);
+		this.strategy = this.repository.findStrategyById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
-
-		status = !this.strategy.getDraftMode();
+		int id = super.getRequest().getData("id", int.class);
+		int accountId = super.getRequest().getPrincipal().getAccountId();
+		status = this.repository.findStrategyById(id).getFundraiser().getUserAccount().getId() == accountId;
 
 		super.setAuthorised(status);
 	}

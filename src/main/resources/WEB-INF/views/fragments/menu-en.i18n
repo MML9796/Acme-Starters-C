@@ -43,3 +43,8 @@ master.menu.user-account.consumer-profile = Consumer profile
 # master.menu.any ###################################################
 master.menu.any = Any
 master.menu.any.strategy.list = Strategy list
+
+#master.menu.fundraiser ##############################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.strategy.list = My strategies
