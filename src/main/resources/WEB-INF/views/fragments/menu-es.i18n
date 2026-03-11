@@ -43,3 +43,5 @@ master.menu.user-account.consumer-profile = Perfil de consumidor
 #master.menu.any ##############################################
 master.menu.campaign = Cualquiera
 master.menu.campaign.list = Lista de Campañas
+master.menu.campaign.myList = Mis Campañas
+master.menu.campaign = Campañas

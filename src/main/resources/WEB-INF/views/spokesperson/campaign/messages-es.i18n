@@ -1,0 +1,17 @@
+spokesperson.campaign.list.title = Lista de Campañas
+spokesperson.campaign.form.title = Detalles de la Campaña
+
+spokesperson.campaign.list.label.ticker = Ticket
+spokesperson.campaign.list.label.name = Nombre
+spokesperson.campaign.list.label.startMoment = Comienzo
+spokesperson.campaign.list.label.endMoment = Fin
+
+spokesperson.campaign.form.label.ticker = Ticket
+spokesperson.campaign.form.label.name = Nombre
+spokesperson.campaign.form.label.description = Descripción
+spokesperson.campaign.form.label.startMoment = Comienzo
+spokesperson.campaign.form.label.endMoment = Fin
+spokesperson.campaign.form.label.monthsActive = Meses Activos
+anspokespersony.campaign.form.label.effort = Media 
+spokesperson.campaign.form.label.moreInfo = Más Info
+spokesperson.campaign.button.milestone = Hito

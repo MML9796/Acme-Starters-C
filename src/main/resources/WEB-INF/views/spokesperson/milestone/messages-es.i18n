@@ -1,0 +1,10 @@
+spokesperson.milestone.list.title = Lista de Hitos
+spokesperson.milestone.form.title = Detalles del Hito
+
+spokesperson.milestone.list.label.title = Título	
+spokesperson.milestone.list.label.achievements = Logros
+
+spokesperson.milestone.form.label.title = Título
+spokesperson.milestone.form.label.achievements = Logros
+spokesperson.milestone.form.label.effort = Media
+spokesperson.milestone.form.label.kind = Tipo

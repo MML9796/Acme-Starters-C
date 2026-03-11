@@ -27,7 +27,9 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.campaign.stream().allMatch(c -> !c.getDraftMode());
+		super.setAuthorised(status);
 	}
 
 	@Override

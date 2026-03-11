@@ -79,6 +79,7 @@ public class Campaign extends AbstractEntity {
 	//Derived attributes
 
 
+	@Mandatory
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
@@ -87,6 +88,7 @@ public class Campaign extends AbstractEntity {
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
+	@Mandatory
 	@ValidNumber(min = 0.0, max = 1000000.0)
 	@Transient
 	public Double getEffort() {
