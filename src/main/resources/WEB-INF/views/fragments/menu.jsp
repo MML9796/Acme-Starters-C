@@ -18,9 +18,8 @@
 
 <acme:menu-bar>
 	<acme:menu-left>
-	
 	<acme:menu-option code="master.menu.any">
-	
+	    <acme:menu-suboption code="master.menu.any.strategy.list" action="/any/strategy/list"/>
 	
 			<acme:menu-suboption code="master.menu.invention.list" action="/any/invention/list"/>
 			
@@ -49,6 +48,10 @@
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.invention.list" action="/inventor/invention/list"/>
+
+		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.fundraiser.strategy.list" action="/fundraiser/strategy/list"/>
+
 		</acme:menu-option>	
 	</acme:menu-left>
 

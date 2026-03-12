@@ -44,8 +44,15 @@ master.menu.user-account.consumer-profile = Perfil de consumidor
 
 master.menu.any = Cualquiera
 master.menu.invention.list = Lista de Invenciones
+master.menu.strategy.list = Lista de estrategias
 
 #master.menu.inventor ##############################################
 
 master.menu.inventor = Inventor
 master.menu.inventor.invention.list = Mis invenciones
+
+#master.menu.fundraiser ##############################################
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.strategy.list = Mis estrategias
+

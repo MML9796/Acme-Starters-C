@@ -1,0 +1,36 @@
+key,ticker,name,description,start-moment,end-moment,more-info,draft-mode,key:auditor
+# ticker,"","","","","","","",""
+audit-report-00,EX00_example,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-01,0001-12345,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-02,AAAa-ABCDEFGHI,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-03,ZY98-abcd,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-05,MN55-abcdefghijk,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-06,"",example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-07,null,example,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# name,"","","","","","","",""
+audit-report-08,TK00-000008,"",example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-09,TK00-000009,null,example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-10,TK00-000010,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem",example,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# description,"","","","","","","",""
+audit-report-11,TK00-000011,example,"",2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-12,TK00-000012,example,null,2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-13,TK00-000013,example,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",2025/09/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+# moments,"","","","","","","",""
+audit-report-14,TK00-000014,example,example,2025/09/01 12:00,2025/09/01 10:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-15,TK00-000015,example,example,2000/09/01 10:00,2000/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-16,TK00-000016,example,example,"",2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-17,TK00-000017,example,example,null,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+audit-report-18,TK00-000018,example,example,2025/08/01 10:00,"",http://lorem.com/ipsum,true,auditor-01
+audit-report-19,TK00-000019,example,example,2025/08/01 10:00,null,http://lorem.com/ipsum,true,auditor-01
+# more-info,"","","","","","","",""
+audit-report-20,TK00-000020,example,example,2025/08/01 10:00,2025/09/01 12:00,http://,true,auditor-01
+audit-report-21,TK00-000021,example,example,2025/08/01 10:00,2025/09/01 12:00,ftp://,true,auditor-01
+audit-report-22,TK00-000022,example,example,2025/08/01 10:00,2025/09/01 12:00,http://a,true,auditor-01
+audit-report-23,TK00-000023,example,example,2025/08/01 10:00,2025/09/01 12:00,ftp://a,true,auditor-01
+audit-report-24,TK00-000024,example,example,2025/08/01 10:00,2025/09/01 12:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",true,auditor-01
+# draft-mode,"","","","","","","",""
+audit-report-25,TK00-000025,example,example,2025/08/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,"",auditor-01
+audit-report-26,TK00-000026,example,example,2025/08/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,null,auditor-01
+#duplicated ticker,"","","","","","","",""
+duplicated-report-01,TK00-000027,example,example,2025/08/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
+duplicated-report-02,TK00-000027,example,example,2025/08/01 10:00,2025/09/01 12:00,http://lorem.com/ipsum,true,auditor-01
