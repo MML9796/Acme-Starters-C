@@ -1,0 +1,17 @@
+spokesperson.campaign.list.title = Campaign list
+spokesperson.campaign.form.title = Campaign details
+
+spokesperson.campaign.list.label.ticker = Ticker
+spokesperson.campaign.list.label.name = Name
+spokesperson.campaign.list.label.startMoment = Start moment
+spokesperson.campaign.list.label.endMoment = End moment
+
+spokesperson.campaign.form.label.ticker = Ticker
+spokesperson.campaign.form.label.name = Name
+spokesperson.campaign.form.label.description = Description
+spokesperson.campaign.form.label.startMoment = Start moment
+spokesperson.campaign.form.label.endMoment = End moment
+spokesperson.campaign.form.label.monthsActive = Months Active
+spokesperson.campaign.form.label.effort = Effort 
+spokesperson.campaign.form.label.moreInfo = More Info
+spokesperson.campaign.button.milestone = Milestone

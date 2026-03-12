@@ -17,4 +17,5 @@ public interface CampaignRepository extends AbstractRepository {
 
 	@Query("select c from Campaign c where c.ticker = :ticker")
 	Campaign findCampaignByTicker(String ticker);
+
 }

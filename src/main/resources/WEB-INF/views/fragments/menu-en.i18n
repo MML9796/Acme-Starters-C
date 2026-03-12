@@ -41,10 +41,10 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
 
 #master.menu.any ##############################################
-
 master.menu.any = Any
 master.menu.invention.list = Invention list
 master.menu.any.strategy.list = Strategy list
+master.menu.campaign.list = Campaign list
 
 #master.menu.inventor ##############################################
 
@@ -56,3 +56,6 @@ master.menu.inventor.invention.list = My inventions
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.strategy.list = My strategies
 
+#master.menu.campaign ##############################################
+master.menu.campaign.myList = My Campaigns
+master.menu.campaign = Campaign
