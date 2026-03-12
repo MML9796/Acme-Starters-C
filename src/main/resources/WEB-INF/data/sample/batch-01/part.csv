@@ -2,6 +2,8 @@ key,key:invention,name,description,cost,kind
 part-01,invention-01,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,CORE
 
 part-02,invention-02,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,CORE
+part-17,invention-03,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,CORE
+part-18,invention-40,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,CORE
 
 part-03,invention-01,"S","High-efficiency solar cell for panels",100.00 EUR,CORE
 part-04,invention-01,"So","High-efficiency solar cell for panels",100.00 EUR,CORE
@@ -15,8 +17,8 @@ part-10,invention-01,"Solar Cell","High-efficiency  solar cell for panels, desig
 
 part-11,invention-01,"Solar Cell","High-efficiency solar cell for panels",0.00 EUR,CORE
 part-12,invention-01,"Solar Cell","High-efficiency solar cell for panels",0.01 EUR,CORE
-part-13,invention-01,"Solar Cell","High-efficiency solar cell for panels",999999.99 EUR,CORE
-part-14,invention-01,"Solar Cell","High-efficiency solar cell for panels",1000000.00 EUR,CORE
+part-13,invention-01,"Solar Cell","High-efficiency solar cell for panels",99999999.99 EUR,CORE
+part-14,invention-01,"Solar Cell","High-efficiency solar cell for panels",100000000.00 EUR,CORE
 
 part-15,invention-01,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,MANDATORY
 part-16,invention-01,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,OPTIONAL

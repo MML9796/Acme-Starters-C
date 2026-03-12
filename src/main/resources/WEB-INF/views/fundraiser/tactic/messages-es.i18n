@@ -1,0 +1,11 @@
+fundraiser.tactic.list.title = Lista de tácticas
+fundraiser.tactic.form.title = Detalles de la táctica
+
+fundraiser.tactic.list.label.name = Nombre
+fundraiser.tactic.list.label.expectedPercentage = Porcentaje esperado
+fundraiser.tactic.list.label.kind = Tipo
+
+fundraiser.tactic.form.label.name = Nombre
+fundraiser.tactic.form.label.expectedPercentage = Porcentaje esperado
+fundraiser.tactic.form.label.kind = Tipo
+fundraiser.tactic.form.label.notes = Notas

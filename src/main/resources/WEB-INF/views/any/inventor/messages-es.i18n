@@ -1,0 +1,6 @@
+any.inventor.form.title = Detalles del Inventor
+
+any.inventor.form.label.username = Nombre de usuario
+any.inventor.form.label.bio = Bio
+any.inventor.form.label.keyWords = Palabras clave
+any.inventor.form.label.licensed = Licencia
