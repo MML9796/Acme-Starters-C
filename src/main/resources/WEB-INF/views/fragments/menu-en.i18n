@@ -43,3 +43,7 @@ master.menu.user-account.consumer-profile = Consumer profile
 #master.menu.any ##############################################
 master.menu.any = Any
 master.menu.sponsorship.list = Sponsorship list
+
+#master.menu.sponsor ##############################################
+master.menu.sponsor = Sponsor
+master.menu.sponsor.sponsorship.list = My sponsorships

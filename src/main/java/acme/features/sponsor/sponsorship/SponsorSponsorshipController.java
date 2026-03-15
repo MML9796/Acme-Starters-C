@@ -1,0 +1,23 @@
+
+package acme.features.sponsor.sponsorship;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+
+import acme.client.controllers.AbstractController;
+import acme.entities.sponsorship.Sponsorship;
+import acme.realms.Sponsor;
+
+@Controller
+public class SponsorSponsorshipController extends AbstractController<Sponsor, Sponsorship> {
+
+	@PostConstruct
+	protected void initialise() {
+		super.setMediaType(MediaType.TEXT_HTML);
+
+		super.addBasicCommand("list", SponsorSponsorshipListService.class);
+		super.addBasicCommand("show", SponsorSponsorshipShowService.class);
+	}
+}
