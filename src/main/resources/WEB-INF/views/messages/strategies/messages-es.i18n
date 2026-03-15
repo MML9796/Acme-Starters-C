@@ -1,0 +1,3 @@
+acme.validation.strategy.duplicated-ticker.message = Este ticker ya está siendo utilizado por otra estrategia.
+acme.validation.strategy.invalid-dates.message = La fecha de fin debe ser estrictamente posterior a la fecha de inicio.
+acme.validation.strategy.missing-tactics.message = Las estrategias no pueden publicarse a menos que tengan al menos una táctica.

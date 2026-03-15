@@ -23,6 +23,7 @@ import acme.client.components.validation.ValidUrl;
 import acme.realms.Inventor;
 import acme.validation.ValidHeader;
 import acme.validation.ValidInvention;
+import acme.validation.ValidMoney2;
 import acme.validation.ValidText;
 import acme.validation.ValidTicker;
 import lombok.Getter;
@@ -82,19 +83,26 @@ public class Invention extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 
+	@Mandatory
+	@Valid
 	@Transient
-	public double getMonthsActive() {
+	public Double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
 		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
+	@Mandatory
+	@ValidMoney2(min = 0.0, max = 1000000000)
 	@Transient
 	public Money getCost() {
 
 		Double sum = this.repository.getSumCostsPartsByInvention(this.getId());
 		Money resultado = new Money();
-		resultado.setAmount(sum);
+		if (sum == null)
+			resultado.setAmount(0.0);
+		else
+			resultado.setAmount(sum);
 		resultado.setCurrency("EUR");
 		return resultado;
 	}

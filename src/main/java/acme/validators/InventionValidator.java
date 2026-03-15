@@ -54,7 +54,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 					boolean hasParts = true;
 					Integer parts = this.repository.findPartsByInventionId(invention.getId());
 					hasParts = parts > 0 && parts != null;
-					super.state(context, hasParts, "parts", "acme.validation.invention.existing-part.message");
+					super.state(context, hasParts, "*", "acme.validation.invention.existing-part.message");
 				}
 			}
 

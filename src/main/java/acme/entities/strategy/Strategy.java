@@ -17,6 +17,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Fundraiser;
 import acme.validation.ValidHeader;
@@ -73,15 +74,19 @@ public class Strategy extends AbstractEntity {
 	private Boolean				draftMode;
 
 
+	@Mandatory
+	@Valid
 	@Transient
-	public double getMonthsActive() {
+	public Double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
 		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
+	@Mandatory
+	@ValidScore
 	@Transient
-	public Double expectedPercentage() {
+	public Double getExpectedPercentage() {
 		Double total = this.repository.sumPercentageByStrategyId(this.getId());
 		if (total == null)
 			return 0.0;

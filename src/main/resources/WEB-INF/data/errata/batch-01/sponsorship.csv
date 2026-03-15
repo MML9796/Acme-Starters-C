@@ -1,33 +1,33 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
 
-sponsorship-01,"BIA26-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-02,"BI246-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-03,"BI26-ABCD","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
+sponsorship-01,"BIA26-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-02,"BI246-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-03,"BI26-ABCD","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
 
-sponsorship-04,"BI27-ABCDE","Iniciativa Global para la Reducción de Emisiones de Carbono en la Industria.","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-05,"BI28-ABCDE","","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-06,"BI99-ABCDE"," ","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
+sponsorship-04,"BI27-ABCDE","Iniciativa Global para la Reducción de Emisiones de Carbono en la Industria.","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-05,"BI28-ABCDE","","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-06,"BI99-ABCDE"," ","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
 
-sponsorship-07,"BI29-ABCDE","Reforestación","","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-08,"BI98-ABCDE","Reforestación"," ","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-09,"BI30-ABCDE","Reforestación","Este proyecto de reforestación masiva en la zona norte tiene como objetivo plantar diez mil árboles autóctonos en un periodo de tres años, promoviendo la biodiversidad local, recuperando los suelos degradados y creando nuevos espacios de recreo y ocio.....","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
+sponsorship-07,"BI29-ABCDE","Reforestación","","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-08,"BI98-ABCDE","Reforestación"," ","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-09,"BI30-ABCDE","Reforestación","Este proyecto de reforestación masiva en la zona norte tiene como objetivo plantar diez mil árboles autóctonos en un periodo de tres años, promoviendo la biodiversidad local, recuperando los suelos degradados y creando nuevos espacios de recreo y ocio.....","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
 
-sponsorship-22,"BI31-ABCDE","Reforestación","Esto es una descripción","2024/12/31 23:59","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-10,"BI32-ABCDE","Reforestación","Esto es una descripción","2201/01/01 00:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
+sponsorship-22,"BI31-ABCDE","Reforestación","Esto es una descripción","2024/12/31 23:59","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-10,"BI32-ABCDE","Reforestación","Esto es una descripción","2201/01/01 00:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
 
-sponsorship-11,"BI33-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/03/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-12,"BI34-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2024/12/31 23:59","https://example.com/product1",false,sponsor-01
-sponsorship-13,"BI35-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2201/01/01 00:00","https://example.com/product1",false,sponsor-01
+sponsorship-11,"BI33-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/03/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-12,"BI34-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2024/12/31 23:59","https://example.com/product1",true,sponsor-01
+sponsorship-13,"BI35-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2201/01/01 00:00","https://example.com/product1",true,sponsor-01
 
-sponsorship-14,"BI36-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","http://",false,sponsor-01
-sponsorship-15,"BI37-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","ftp://",false,sponsor-01
-sponsorship-16,"BI38-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","http://a",false,sponsor-01
-sponsorship-17,"BI39-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","ftp://a",false,sponsor-01
-sponsorship-18,"BI40-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",false,sponsor-01
+sponsorship-14,"BI36-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","http://",true,sponsor-01
+sponsorship-15,"BI37-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","ftp://",true,sponsor-01
+sponsorship-16,"BI38-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","http://a",true,sponsor-01
+sponsorship-17,"BI39-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","ftp://a",true,sponsor-01
+sponsorship-18,"BI40-ABCDE","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",true,sponsor-01
 
-sponsorship-19,"26-ABCD","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-20,"BI-ABCD","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
-sponsorship-21,"BI26-","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",false,sponsor-01
+sponsorship-19,"26-ABCD","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-20,"BI-ABCD","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
+sponsorship-21,"BI26-","Reforestación","Esto es una descripción","2026/04/15 10:00","2026/10/15 10:00","https://example.com/product1",true,sponsor-01
 
 
 
