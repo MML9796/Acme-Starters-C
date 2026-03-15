@@ -4,8 +4,10 @@ package acme.features.spokesperson.milestone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.milestones.Milestone;
+import acme.entities.milestones.MilestoneKind;
 import acme.realms.Spokesperson;
 
 @Service
@@ -55,6 +57,8 @@ public class SpokespersonMilestoneUpdateService extends AbstractService<Spokespe
 	@Override
 	public void unbind() {
 		super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
+		SelectChoices opcionesKind = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
+		super.unbindGlobal("listaKinds", opcionesKind);
 
 	}
 

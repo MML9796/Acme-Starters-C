@@ -2,10 +2,12 @@
 package acme.features.spokesperson.campaign;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.campaign.Campaign;
 import acme.entities.milestones.Milestone;
@@ -36,12 +38,11 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 		boolean status;
 		int spokespersonId, campaignId;
 		Campaign ca;
-		Collection<Milestone> m;
 		spokespersonId = super.getRequest().getPrincipal().getActiveRealm().getId();
 		campaignId = super.getRequest().getData("id", int.class);
-		m = this.milestoneRepository.findAllMilestoneByCampaignId(campaignId);
+
 		ca = this.repository.findCampaignById(campaignId);
-		status = ca != null && ca.getSpokesperson().getId() == spokespersonId && ca.getDraftMode() && m.size() >= 1;
+		status = ca != null && ca.getSpokesperson().getId() == spokespersonId && ca.getDraftMode();
 
 		super.setAuthorised(status);
 	}
@@ -54,6 +55,19 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 	@Override
 	public void validate() {
 		super.validateObject(this.campaign);
+		if (!super.getErrors().hasErrors()) {
+			Collection<Milestone> m;
+			m = this.milestoneRepository.findAllMilestoneByCampaignId(this.campaign.getId());
+			Boolean haveMilestone;
+			haveMilestone = !m.isEmpty();
+			super.state(haveMilestone, "*", "acme.publish.campaign.noHaveMilestone.message");
+			Date mo;
+			mo = MomentHelper.getCurrentMoment();
+			Boolean validStartMoment;
+			validStartMoment = this.campaign.getStartMoment().after(mo);
+			super.state(validStartMoment, "*", "acme.publish.campaign.validStartMoment.message");
+
+		}
 	}
 
 	@Override
