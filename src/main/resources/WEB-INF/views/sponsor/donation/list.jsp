@@ -6,3 +6,7 @@
 	<acme:list-column code="sponsor.donation.list.label.name" path="name"/>
 	<acme:list-column code="sponsor.donation.list.label.notes" path="notes"/>
 </acme:list>
+
+ <jstl:if test="${draftMode == true}">
+        <acme:button code="sponsor.donation.button.create" action="/sponsor/donation/create?sponsorshipId=${sponsorshipId}"/>
+    </jstl:if>

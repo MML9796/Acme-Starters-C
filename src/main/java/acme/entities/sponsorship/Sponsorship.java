@@ -81,7 +81,11 @@ public class Sponsorship extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
+		if (diffMillis <= 0)
+			return 0.0;
 		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
@@ -90,14 +94,17 @@ public class Sponsorship extends AbstractEntity {
 	@ValidMoney2(min = 0.0, max = 1000000.0)
 	@Transient
 	public Money getTotalMoney() {
+		Money resultado = new Money();
+		resultado.setCurrency("EUR");
+		resultado.setAmount(0.0);
+
+		if (this.repository == null)
+			return resultado;
 
 		Double sum = this.repository.getSumTotalMoneyBySponsorship(this.getId());
-		Money resultado = new Money();
-		if (sum == null)
-			resultado.setAmount(0.0);
-		else
+		if (sum != null)
 			resultado.setAmount(sum);
-		resultado.setCurrency("EUR");
+
 		return resultado;
 	}
 

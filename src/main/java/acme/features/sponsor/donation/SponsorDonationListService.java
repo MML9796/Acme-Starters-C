@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.donation.Donation;
+import acme.entities.sponsorship.Sponsorship;
+import acme.features.sponsor.sponsorship.SponsorSponsorshipRepository;
 import acme.realms.Sponsor;
 
 @Service
@@ -15,8 +17,10 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 
 	//Internal state
 	@Autowired
-	private SponsorDonationRepository	repository;
-	private Collection<Donation>		donation;
+	private SponsorDonationRepository		repository;
+	@Autowired
+	private SponsorSponsorshipRepository	sponsorshipRepository;
+	private Collection<Donation>			donation;
 
 
 	//AbstractService interface
@@ -40,6 +44,12 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 
 	@Override
 	public void unbind() {
+		Sponsorship spsh;
+		int id;
+		id = super.getRequest().getData("sponsorshipId", int.class);
+		spsh = this.sponsorshipRepository.findSponsorshipById(id);
 		super.unbindObjects(this.donation, "name", "notes");
+		super.unbindGlobal("draftMode", spsh.getDraftMode());
+		super.unbindGlobal("sponsorshipId", spsh.getId());
 	}
 }
