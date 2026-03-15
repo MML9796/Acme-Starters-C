@@ -15,3 +15,8 @@ spokesperson.campaign.form.label.monthsActive = Months Active
 spokesperson.campaign.form.label.effort = Effort 
 spokesperson.campaign.form.label.moreInfo = More Info
 spokesperson.campaign.button.milestone = Milestone
+
+spokesperson.campaign.button.publish = Publish
+spokesperson.campaign.button.delete = Delete
+spokesperson.campaign.button.create = Create
+spokesperson.campaign.button.update = Update

@@ -6,10 +6,32 @@
 	<acme:form-textbox code="spokesperson.campaign.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="spokesperson.campaign.form.label.name" path="name"/>
 	<acme:form-textbox code="spokesperson.campaign.form.label.description" path="description"/>
-	<acme:form-textbox code="spokesperson.campaign.form.label.startMoment" path="startMoment"/>
-	<acme:form-textbox code="spokesperson.campaign.form.label.endMoment" path="endMoment"/>
-	<acme:form-textbox code="spokesperson.campaign.form.label.monthsActive" path="monthsActive"/>
-	<acme:form-textbox code="spokesperson.campaign.form.label.effort" path="effort"/>
-	<acme:form-textbox code="spokesperson.campaign.form.label.moreInfo" path="moreInfo"/>
-	<acme:button code="spokesperson.campaign.button.milestone" action="/spokesperson/milestone/list?campaignId=${id}"/>
+	<acme:form-moment code="spokesperson.campaign.form.label.startMoment" path="startMoment"/>
+	<acme:form-moment code="spokesperson.campaign.form.label.endMoment" path="endMoment"/>
+	<acme:form-url code="spokesperson.campaign.form.label.moreInfo" path="moreInfo"/>
+	
+	<jstl:if test="${_command == 'show'}">
+    <acme:form-double code="spokesperson.campaign.form.label.monthsActive" path="monthsActive" readonly="true"/>
+    <acme:form-double code="spokesperson.campaign.form.label.effort" path="effort" readonly="true"/>
+    </jstl:if>
+    
+	<jstl:choose>
+    <jstl:when test="${_command == 'create' }">
+        <acme:submit code="spokesperson.campaign.button.create" action="/spokesperson/campaign/create"/>
+    </jstl:when>
+
+    <jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') }">
+        
+        <acme:button code="spokesperson.campaign.button.milestone" action="/spokesperson/milestone/list?campaignId=${id}"/>
+
+        <jstl:if test="${draftMode == true}">
+            <acme:submit code="spokesperson.campaign.button.update" action="/spokesperson/campaign/update"/>
+            <acme:submit code="spokesperson.campaign.button.delete" action="/spokesperson/campaign/delete"/>
+            <acme:submit code="spokesperson.campaign.button.publish" action="/spokesperson/campaign/publish"/>
+        </jstl:if>
+
+    </jstl:when>
+
+</jstl:choose>
+
 </acme:form>

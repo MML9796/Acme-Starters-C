@@ -8,3 +8,5 @@
 	<acme:list-column code="spokesperson.campaign.list.label.startMoment" path="startMoment"/>
 	<acme:list-column code="spokesperson.campaign.list.label.endMoment" path="endMoment"/>
 </acme:list>
+
+<acme:button code="spokesperson.campaign.button.create" action="/spokesperson/campaign/create"/>

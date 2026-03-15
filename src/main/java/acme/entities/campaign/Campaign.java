@@ -89,9 +89,11 @@ public class Campaign extends AbstractEntity {
 	}
 
 	@Mandatory
-	@ValidNumber(min = 0.0, max = 1000000.0)
+	@ValidNumber(min = 0.0)
 	@Transient
 	public Double getEffort() {
+		if (this.campaignRepository == null)
+			return 0.0;
 		Double total = this.campaignRepository.sumEffortByCampaignId(this.getId());
 		return total != null ? total : 0.0;
 	}

@@ -15,3 +15,8 @@ spokesperson.campaign.form.label.monthsActive = Meses Activos
 anspokespersony.campaign.form.label.effort = Media 
 spokesperson.campaign.form.label.moreInfo = Más Info
 spokesperson.campaign.button.milestone = Hito
+
+spokesperson.campaign.button.publish = Publicar
+spokesperson.campaign.button.delete = Borrar
+spokesperson.campaign.button.create = Crear
+spokesperson.campaign.button.update = Actualizar

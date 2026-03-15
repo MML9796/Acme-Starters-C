@@ -19,6 +19,9 @@ public class SpokespersonMilestoneController extends AbstractController<Spokespe
 
 		super.addBasicCommand("list", SpokespersonMilestoneListService.class);
 		super.addBasicCommand("show", SpokespersonMilestoneShowService.class);
+		super.addBasicCommand("update", SpokespersonMilestoneUpdateService.class);
+		super.addBasicCommand("create", SpokespersonMilestoneCreateService.class);
+		super.addBasicCommand("delete", SpokespersonMilestoneDeleteService.class);
 	}
 
 }
