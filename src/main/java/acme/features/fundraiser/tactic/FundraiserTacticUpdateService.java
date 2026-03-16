@@ -11,7 +11,7 @@ import acme.entities.tactic.TacticKind;
 import acme.realms.Fundraiser;
 
 @Service
-public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tactic> {
+public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, Tactic> {
 
 	@Autowired
 	private FundraiserTacticRepository	repository;
@@ -21,7 +21,6 @@ public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tac
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.tactic = this.repository.findTacticById(id);
 	}
@@ -29,20 +28,33 @@ public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tac
 	@Override
 	public void authorise() {
 		boolean status;
-		int idS;
-		int idF;
-		idS = this.tactic.getStrategy().getFundraiser().getId();
-		idF = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = idS == idF;
+		int fundraiserId, tacticId;
+		Tactic t;
+		fundraiserId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		tacticId = super.getRequest().getData("id", int.class);
+		t = this.repository.findTacticById(tacticId);
+		status = t != null && t.getStrategy().getFundraiser().getId() == fundraiserId && t.getStrategy().getDraftMode();
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.tactic, "name", "expectedPercentage", "kind", "notes");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.tactic);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.tactic);
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObject(this.tactic, "name", "expectedPercentage", "kind", "notes");
-		super.unbindGlobal("draftMode", this.tactic.getStrategy().getDraftMode());
-		super.unbindGlobal("strategyId", this.tactic.getStrategy().getId());
-		super.unbindGlobal("id", this.tactic.getId());
 		SelectChoices opcionesKind = SelectChoices.from(TacticKind.class, this.tactic.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
 	}

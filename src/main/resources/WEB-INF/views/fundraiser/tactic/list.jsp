@@ -7,3 +7,7 @@
     <acme:list-column code="fundraiser.tactic.list.label.expectedPercentage" path="expectedPercentage"/>
     <acme:list-column code="fundraiser.tactic.list.label.kind" path="kind"/>
 </acme:list>
+
+<jstl:if test="${draftMode == true}">
+    <acme:button code="fundraiser.tactic.button.create" action="/fundraiser/tactic/create?strategyId=${strategyId}"/>
+</jstl:if>

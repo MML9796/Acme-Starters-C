@@ -15,4 +15,8 @@ fundraiser.strategy.list.label.moreInfo = Más información
 fundraiser.strategy.list.label.monthsActive = Meses activos
 fundraiser.strategy.list.label.expectedPercentage = Porcentaje esperado
 
-fundraiser.strategy.form.label.tactics = Tacticas
+fundraiser.strategy.button.tactics = Tacticas
+fundraiser.strategy.button.publish = Publicar
+fundraiser.strategy.button.delete = Borrar
+fundraiser.strategy.button.create = Crear
+fundraiser.strategy.button.update = Actualizar

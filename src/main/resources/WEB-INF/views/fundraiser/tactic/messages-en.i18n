@@ -9,3 +9,7 @@ fundraiser.tactic.form.label.name = Name
 fundraiser.tactic.form.label.expectedPercentage = Expected Percentage
 fundraiser.tactic.form.label.kind = Kind
 fundraiser.tactic.form.label.notes = Notes
+
+fundraiser.tactic.button.delete = Delete
+fundraiser.tactic.button.create = Create
+fundraiser.tactic.button.update = Update

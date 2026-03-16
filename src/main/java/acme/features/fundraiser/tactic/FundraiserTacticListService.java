@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
+import acme.entities.strategy.Strategy;
 import acme.entities.tactic.Tactic;
 import acme.features.fundraiser.strategy.FundraiserStrategyRepository;
 import acme.realms.Fundraiser;
@@ -32,15 +33,21 @@ public class FundraiserTacticListService extends AbstractService<Fundraiser, Tac
 	@Override
 	public void authorise() {
 		boolean status;
-		int id = super.getRequest().getData("strategyId", int.class);
-		int accountId = super.getRequest().getPrincipal().getAccountId();
-		status = this.strategyRepository.findStrategyById(id).getFundraiser().getUserAccount().getId() == accountId;
+		int id;
+		id = super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = this.tactics.stream().allMatch(t -> t.getStrategy().getFundraiser().getId() == id);
 		super.setAuthorised(status);
 
 	}
 
 	@Override
 	public void unbind() {
+		Strategy s;
+		int id;
+		id = super.getRequest().getData("strategyId", int.class);
+		s = this.strategyRepository.findStrategyById(id);
 		super.unbindObjects(this.tactics, "name", "expectedPercentage", "kind");
+		super.unbindGlobal("draftMode", s.getDraftMode());
+		super.unbindGlobal("strategyId", s.getId());
 	}
 }

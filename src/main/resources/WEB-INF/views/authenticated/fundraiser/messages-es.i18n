@@ -1,0 +1,9 @@
+# messages-en.i18n
+authenticated.fundraiser.form.title = Formulario del recaudador
+
+authenticated.fundraiser.form.label.bank = Banco
+authenticated.fundraiser.form.label.statement = Declaración
+authenticated.fundraiser.form.label.agent = Agente
+
+authenticated.fundraiser.form.button.create = Registrar
+authenticated.fundraiser.form.button.update = Actualizar

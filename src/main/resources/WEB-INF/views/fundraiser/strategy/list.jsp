@@ -9,3 +9,5 @@
     <acme:list-column code="fundraiser.strategy.list.label.startMoment" path="startMoment"/>
     <acme:list-column code="fundraiser.strategy.list.label.endMoment" path="endMoment"/>
 </acme:list>
+
+<acme:button code="fundraiser.strategy.button.create" action="/fundraiser/strategy/create"/>

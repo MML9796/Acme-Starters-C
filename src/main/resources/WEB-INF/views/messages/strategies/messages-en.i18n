@@ -1,3 +1,5 @@
 acme.validation.strategy.duplicated-ticker.message = This ticker is already in use by another strategy.
 acme.validation.strategy.invalid-dates.message = The end moment must be strictly after the start moment.
 acme.validation.strategy.missing-tactics.message = Strategies cannot be published unless they have at least one tactic.
+acme.publish.strategy.noHaveTactic.message = A strategy must have at least one tactic to be published.
+acme.publish.strategy.validStartMoment.message = The start date must be in the future.

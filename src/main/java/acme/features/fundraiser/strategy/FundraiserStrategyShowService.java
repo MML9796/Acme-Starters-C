@@ -27,16 +27,17 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 	@Override
 	public void authorise() {
 		boolean status;
-		int id = super.getRequest().getData("id", int.class);
-		int accountId = super.getRequest().getPrincipal().getAccountId();
-		status = this.repository.findStrategyById(id).getFundraiser().getUserAccount().getId() == accountId;
-
+		int idS;
+		int idF;
+		idS = this.strategy.getFundraiser().getId();
+		idF = super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = idS == idF;
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "expectedPercentage");
+		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "expectedPercentage", "draftMode");
 		super.unbindGlobal("id", this.strategy.getId());
 		super.unbindGlobal("fundraiserId", this.strategy.getFundraiser().getId());
 	}
