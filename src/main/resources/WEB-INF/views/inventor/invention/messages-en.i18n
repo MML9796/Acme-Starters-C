@@ -16,3 +16,8 @@ inventor.invention.form.label.cost = Cost
 inventor.invention.form.label.moreInfo = More Info
 inventor.invention.button.parts = Parts
 inventor.invention.button.inventor= Inventor
+
+inventor.invention.button.publish = Publish
+inventor.invention.button.delete = Delete
+inventor.invention.button.create = Create
+inventor.invention.button.update = Update

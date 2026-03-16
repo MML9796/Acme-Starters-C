@@ -50,7 +50,7 @@ public class Part extends AbstractEntity {
 	// Custom enum values -----------------------------------------------------
 
 
-	enum PartKind {
+	public enum PartKind {
 		CORE, MANDATORY, OPTIONAL
 	};
 

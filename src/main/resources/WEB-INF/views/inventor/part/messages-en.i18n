@@ -8,3 +8,7 @@ inventor.part.form.label.name = Name
 inventor.part.form.label.description = Description
 inventor.part.form.label.cost = Cost
 inventor.part.form.label.kind = Kind
+
+inventor.part.button.delete = Delete
+inventor.part.button.create = Create
+inventor.part.button.update = Update
