@@ -1,5 +1,4 @@
 acme.validation.sponsorship.duplicated-ticker.message = El ticker ya está siendo utilizado por otro patrocinio
 acme.validation.sponsorship.invalid-date.message = La fecha de finalización debe ser posterior a la fecha de inicio
 acme.validation.sponsorship.missing-donations.message = El patrocinio no puede publicarse si no tiene al menos una donación
-acme.publish.sponsorship.noHasDonation.message = Un patrocinio debe tener al menos una donación para ser publicado
-acme.publish.sponsorship.validStartMoment.message = La fecha de inicio debe ser en el futuro
+acme.publish.sponsorship.publish-after-start.message = La fecha de inicio debe ser en el futuro

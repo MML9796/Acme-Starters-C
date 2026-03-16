@@ -5,7 +5,7 @@
 <acme:form>
 	<acme:form-textbox code="sponsor.sponsorship.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="sponsor.sponsorship.form.label.name" path="name"/>
-	<acme:form-textbox code="sponsor.sponsorship.form.label.description" path="description"/>
+	<acme:form-textarea code="sponsor.sponsorship.form.label.description" path="description"/>
 	<acme:form-moment code="sponsor.sponsorship.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="sponsor.sponsorship.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="sponsor.sponsorship.form.label.moreInfo" path="moreInfo"/>

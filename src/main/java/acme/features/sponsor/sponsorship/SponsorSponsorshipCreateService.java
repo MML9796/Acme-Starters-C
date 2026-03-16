@@ -29,20 +29,7 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 
 	@Override
 	public void authorise() {
-		boolean status;
-		String method;
-		int sponsorId, sponsorshipId;
-		Sponsorship spsh;
-		method = super.getRequest().getMethod();
-		if (method.equals("GET"))
-			status = true;
-		else {
-			sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			sponsorshipId = super.getRequest().getData("id", int.class);
-			spsh = this.repository.findSponsorshipById(sponsorshipId);
-			status = sponsorshipId == 0 || spsh != null && spsh.getSponsor().getId() == sponsorId;
-		}
-		super.setAuthorised(status);
+		super.setAuthorised(true);
 	}
 
 	@Override

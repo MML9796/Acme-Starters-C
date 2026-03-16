@@ -32,6 +32,8 @@ public class SponsorDonationCreateService extends AbstractService<Sponsor, Donat
 		spsh = this.sponsorshipRepository.findSponsorshipById(sponsorshipId);
 		this.donation = super.newObject(Donation.class);
 		this.donation.setSponsorship(spsh);
+		if (spsh != null)
+			this.donation.setSponsorship(spsh);
 	}
 
 	@Override

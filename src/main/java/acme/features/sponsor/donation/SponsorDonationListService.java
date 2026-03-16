@@ -35,9 +35,18 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
-		id = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.donation.stream().allMatch(d -> d.getSponsorship().getSponsor().getId() == id);
+
+		int sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
+
+		int principalId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		var sponsorship = this.sponsorshipRepository.findSponsorshipById(sponsorshipId);
+
+		if (sponsorship == null)
+			status = false;
+		else
+			status = sponsorship.getSponsor().getId() == principalId;
+
 		super.setAuthorised(status);
 
 	}

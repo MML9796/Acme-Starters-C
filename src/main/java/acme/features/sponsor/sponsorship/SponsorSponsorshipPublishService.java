@@ -1,7 +1,6 @@
 
 package acme.features.sponsor.sponsorship;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
-import acme.entities.donation.Donation;
 import acme.entities.sponsorship.Sponsorship;
 import acme.features.sponsor.donation.SponsorDonationRepository;
 import acme.realms.Sponsor;
@@ -53,18 +51,15 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 	@Override
 	public void validate() {
 		super.validateObject(this.sponsorship);
-		if (!super.getErrors().hasErrors()) {
-			Collection<Donation> d;
-			d = this.donationRepository.findAllDonationBySponsorshipId(this.sponsorship.getId());
-			Boolean hasDonation;
-			hasDonation = !d.isEmpty();
-			super.state(hasDonation, "*", "acme.publish.sponsorship.noHasDonation.message");
-			Date mo;
-			mo = MomentHelper.getCurrentMoment();
-			Boolean validStartMoment;
-			validStartMoment = this.sponsorship.getStartMoment().after(mo);
-			super.state(validStartMoment, "*", "acme.publish.sponsorship.validStartMoment.message");
-		}
+		Integer numDonations;
+		Date publishMoment;
+
+		numDonations = this.repository.getNumDonationsBySponsorshipId(this.sponsorship.getId());
+		publishMoment = MomentHelper.getCurrentMoment();
+
+		super.state(numDonations > 0, "*", "acme.validation.sponsorship.missing-donations.message");
+
+		super.state(publishMoment.before(this.sponsorship.getStartMoment()), "startMoment", "acme.validation.sponsorship.publish-after-start.message");
 	}
 
 	@Override

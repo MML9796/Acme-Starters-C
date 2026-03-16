@@ -31,11 +31,16 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void authorise() {
 		boolean status;
-		int idDonation;
-		int idS;
-		idDonation = this.donation.getSponsorship().getSponsor().getId();
-		idS = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = idDonation == idS;
+
+		int donationId = super.getRequest().getData("id", int.class);
+		Donation donation = this.repository.findDonationById(donationId);
+		int principalId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		if (donation == null)
+			status = false;
+		else
+			status = donation.getSponsorship().getSponsor().getId() == principalId;
+
 		super.setAuthorised(status);
 	}
 

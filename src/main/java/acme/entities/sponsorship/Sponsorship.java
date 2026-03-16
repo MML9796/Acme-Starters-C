@@ -91,7 +91,7 @@ public class Sponsorship extends AbstractEntity {
 	}
 
 	@Mandatory
-	@ValidMoney2(min = 0.0, max = 1000000.0)
+	@ValidMoney2(min = 0.0)
 	@Transient
 	public Money getTotalMoney() {
 		Money resultado = new Money();

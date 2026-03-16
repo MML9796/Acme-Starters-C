@@ -1,5 +1,4 @@
 acme.validation.sponsorship.duplicated-ticker.message = The ticker is already in use by another sponsorship
 acme.validation.sponsorship.invalid-date.message = The end moment must be strictly after the start moment
 acme.validation.sponsorship.missing-donations.message = The sponsorship cannot be published unless it has at least one donation
-acme.publish.sponsorship.noHasDonation.message = A sponsorship must have at least one donation to be published
-acme.publish.sponsorship.validStartMoment.message = The start date must be in the future
+acme.validation.sponsorship.publish-after-start.message = The start date must be in the future

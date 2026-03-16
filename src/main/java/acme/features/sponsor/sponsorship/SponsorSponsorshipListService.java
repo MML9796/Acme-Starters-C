@@ -30,8 +30,7 @@ public class SponsorSponsorshipListService extends AbstractService<Sponsor, Spon
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
-		id = super.getRequest().getPrincipal().getActiveRealm().getId();
+		int id = super.getRequest().getPrincipal().getActiveRealm().getId();
 		status = this.sponsorship.stream().allMatch(s -> s.getSponsor().getId() == id);
 		super.setAuthorised(status);
 	}

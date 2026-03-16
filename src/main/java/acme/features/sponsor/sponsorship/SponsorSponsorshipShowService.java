@@ -29,11 +29,16 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 	@Override
 	public void authorise() {
 		boolean status;
-		int idSponsorship;
-		int idS;
-		idSponsorship = this.sponsorship.getSponsor().getId();
-		idS = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = idSponsorship == idS;
+
+		int id = super.getRequest().getData("id", int.class);
+		Sponsorship s = this.repository.findSponsorshipById(id);
+
+		if (s != null) {
+			int idS = super.getRequest().getPrincipal().getActiveRealm().getId();
+			status = s.getSponsor().getId() == idS;
+		} else
+			status = false;
+
 		super.setAuthorised(status);
 	}
 
