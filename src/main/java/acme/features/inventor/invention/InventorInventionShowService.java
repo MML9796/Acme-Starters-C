@@ -28,10 +28,12 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = false;
 		int id = super.getRequest().getData("id", int.class);
 		int inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.repository.findInventionById(id).getInventor().getId() == inventorId;
+		Invention inv = this.repository.findInventionById(id);
+		if (inv != null)
+			status = inv.getInventor().getId() == inventorId;
 
 		super.setAuthorised(status);
 	}

@@ -33,10 +33,12 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = false;
 		int id = super.getRequest().getData("inventionId", int.class);
 		int inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.inventionRepository.findInventionById(id).getInventor().getId() == inventorId;
+		Invention inv = this.inventionRepository.findInventionById(id);
+		if (inv != null)
+			status = inv.getInventor().getId() == inventorId;
 		super.setAuthorised(status);
 
 	}

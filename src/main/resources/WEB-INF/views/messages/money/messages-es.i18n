@@ -1,2 +1,2 @@
-acme.validation.money.eur-currency.message = el importe de los costes debe ser en euros.
+acme.validation.money.eur-currency.message = el importe de los costes debe ser en EUR.
 acme.validation.money.range.message = Rango de dinero inválido.

@@ -30,9 +30,10 @@ public class InventorPartShowService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = false;
 		int inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.part.getInvention().getInventor().getId() == inventorId;
+		if (this.part != null)
+			status = this.part.getInvention().getInventor().getId() == inventorId;
 		super.setAuthorised(status);
 	}
 

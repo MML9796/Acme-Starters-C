@@ -17,8 +17,8 @@ part-10,invention-01,"Solar Cell","High-efficiency  solar cell for panels, desig
 
 part-11,invention-01,"Solar Cell","High-efficiency solar cell for panels",0.00 EUR,CORE
 part-12,invention-01,"Solar Cell","High-efficiency solar cell for panels",0.01 EUR,CORE
-part-13,invention-01,"Solar Cell","High-efficiency solar cell for panels",99999999.99 EUR,CORE
-part-14,invention-01,"Solar Cell","High-efficiency solar cell for panels",100000000.00 EUR,CORE
+part-13,invention-01,"Solar Cell","High-efficiency solar cell for panels",999999.99 EUR,CORE
+part-14,invention-01,"Solar Cell","High-efficiency solar cell for panels",1000000.00 EUR,CORE
 
 part-15,invention-01,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,MANDATORY
 part-16,invention-01,"Solar Cell","High-efficiency solar cell for panels",100.00 EUR,OPTIONAL
