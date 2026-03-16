@@ -4,7 +4,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-textbox code="authenticated.inventor.form.label.bio" path="bio"/>
+	<acme:form-textarea code="authenticated.inventor.form.label.bio" path="bio"/>
 	<acme:form-textbox code="authenticated.inventor.form.label.keyWords" path="keyWords"/>
 	<acme:form-textbox code="authenticated.inventor.form.label.licensed" path="licensed"/>
 	

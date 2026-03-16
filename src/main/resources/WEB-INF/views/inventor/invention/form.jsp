@@ -5,7 +5,7 @@
 <acme:form>
 	<acme:form-textbox code="inventor.invention.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="inventor.invention.form.label.name" path="name"/>
-	<acme:form-textbox code="inventor.invention.form.label.description" path="description"/>
+	<acme:form-textarea code="inventor.invention.form.label.description" path="description"/>
 	<acme:form-moment code="inventor.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="inventor.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="inventor.invention.form.label.moreInfo" path="moreInfo"/>

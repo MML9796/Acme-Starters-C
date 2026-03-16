@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.part.Part;
+import acme.entities.part.Part.PartKind;
 
 @Service
 public class AnyPartShowService extends AbstractService<Any, Part> {
@@ -36,5 +38,7 @@ public class AnyPartShowService extends AbstractService<Any, Part> {
 	@Override
 	public void unbind() {
 		super.unbindObject(this.part, "name", "description", "cost", "kind");
+		SelectChoices opcionesKind = SelectChoices.from(PartKind.class, this.part.getKind());
+		super.unbindGlobal("listaKinds", opcionesKind);
 	}
 }

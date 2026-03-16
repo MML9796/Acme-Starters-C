@@ -47,7 +47,7 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 			inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
 			inventionId = super.getRequest().getData("inventionId", int.class);
 			inv = this.repositoryInvention.findInventionById(inventionId);
-			status = inv != null && inv.getInventor().getId() == inventorId && inv.getDraftMode();
+			status = inv.getInventor().getId() == inventorId && inv.getDraftMode();
 		}
 		super.setAuthorised(status);
 	}

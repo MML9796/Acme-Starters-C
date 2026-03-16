@@ -29,20 +29,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void authorise() {
-		boolean status;
-		String method;
-		int inventorId, inventionId;
-		Invention inv;
-		method = super.getRequest().getMethod();
-		if (method.equals("GET"))
-			status = true;
-		else {
-			inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			inventionId = super.getRequest().getData("id", int.class);
-			inv = this.repository.findInventionById(inventionId);
-			status = inventionId == 0 || inv != null && inv.getInventor().getId() == inventorId;
-		}
-		super.setAuthorised(status);
+		super.setAuthorised(true);
 	}
 
 	@Override
