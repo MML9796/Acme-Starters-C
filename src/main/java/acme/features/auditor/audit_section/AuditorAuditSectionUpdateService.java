@@ -39,7 +39,7 @@ public class AuditorAuditSectionUpdateService extends AbstractService<Auditor, A
 		boolean fieldsNotNull;
 
 		fieldsNotNull = this.auditSection != null && this.auditSection.getAuditReport() != null;
-		status = fieldsNotNull && this.auditSection.getAuditReport().getAuditor().isPrincipal();
+		status = fieldsNotNull && this.auditSection.getAuditReport().getAuditor().isPrincipal() && this.auditSection.getAuditReport().getDraftMode();
 
 		super.setAuthorised(status);
 	}
