@@ -39,12 +39,12 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 		int fundraiserId, strategyId;
 		Strategy s;
 		method = super.getRequest().getMethod();
+		strategyId = super.getRequest().getData("strategyId", int.class);
+		s = this.repositoryStrategy.findStrategyById(strategyId);
 		if (method.equals("GET"))
-			status = true;
+			status = s != null;
 		else {
 			fundraiserId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			strategyId = super.getRequest().getData("strategyId", int.class);
-			s = this.repositoryStrategy.findStrategyById(strategyId);
 			status = s != null && s.getId() == strategyId && s.getFundraiser().getId() == fundraiserId && s.getDraftMode();
 		}
 		super.setAuthorised(status);
@@ -63,6 +63,16 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 	@Override
 	public void validate() {
 		super.validateObject(this.tactic);
+		if (!super.getErrors().hasErrors("expectedPercentage")) {
+			int id = super.getRequest().getData("strategyId", int.class);
+			Double sum = this.repositoryStrategy.sumPercentageByStrategyId(id);
+			if (sum == null)
+				sum = 0.0;
+
+			boolean isValidTotal = sum + this.tactic.getExpectedPercentage() <= 100.0;
+
+			super.state(isValidTotal, "expectedPercentage", "fundraiser.tactic.form.error.percentage-overflow");
+		}
 	}
 
 	@Override

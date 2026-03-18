@@ -27,10 +27,13 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 	@Override
 	public void authorise() {
 		boolean status;
+		if (this.strategy == null)
+			super.setAuthorised(false);
+		else {
+			status = !this.strategy.getDraftMode();
+			super.setAuthorised(status);
+		}
 
-		status = !this.strategy.getDraftMode();
-
-		super.setAuthorised(status);
 	}
 
 	@Override

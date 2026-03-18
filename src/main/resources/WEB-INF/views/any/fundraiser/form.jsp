@@ -5,6 +5,6 @@
 <acme:form>
 	<acme:form-textbox code="any.fundraiser.form.label.username" path="userAccount.username"/>
     <acme:form-textbox code="any.fundraiser.form.label.bank" path="bank"/>
-    <acme:form-textbox code="any.fundraiser.form.label.agent" path="agent"/>
+    <acme:form-checkbox code="any.fundraiser.form.label.agent" path="agent"/>
     <acme:form-textarea code="any.fundraiser.form.label.statement" path="statement"/>
 </acme:form>

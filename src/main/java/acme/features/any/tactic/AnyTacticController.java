@@ -14,7 +14,7 @@ import acme.entities.tactic.Tactic;
 public class AnyTacticController extends AbstractController<Any, Tactic> {
 
 	@PostConstruct
-	private void initialise() {
+	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", AnyTacticListService.class);

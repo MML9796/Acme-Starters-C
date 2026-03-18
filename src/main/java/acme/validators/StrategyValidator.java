@@ -19,7 +19,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 
 
 	@Override
-	public void initialise(final ValidStrategy annotation) {
+	protected void initialise(final ValidStrategy annotation) {
 		assert annotation != null;
 	}
 

@@ -27,7 +27,7 @@ public class AuthenticatedFundraiserCreateService extends AbstractService<Authen
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
 		userAccount = this.repository.findUserAccountById(userAccountId);
 
-		this.fundraiser = new Fundraiser();
+		this.fundraiser = this.newObject(Fundraiser.class);
 		this.fundraiser.setUserAccount(userAccount);
 	}
 

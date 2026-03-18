@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.tactic.Tactic;
+import acme.entities.tactic.TacticKind;
 
 @Service
 public class AnyTacticShowService extends AbstractService<Any, Tactic> {
@@ -26,12 +28,18 @@ public class AnyTacticShowService extends AbstractService<Any, Tactic> {
 
 	@Override
 	public void authorise() {
-		boolean status = this.tactic.getStrategy().getDraftMode() == false;
-		super.setAuthorised(status);
+		if (this.tactic == null)
+			super.setAuthorised(false);
+		else {
+			boolean status = !this.tactic.getStrategy().getDraftMode();
+			super.setAuthorised(status);
+		}
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObject(this.tactic, "name", "expectedPercentage", "kind", "notes");
+		SelectChoices opcionesKind = SelectChoices.from(TacticKind.class, this.tactic.getKind());
+		super.unbindGlobal("listaKinds", opcionesKind);
 	}
 }

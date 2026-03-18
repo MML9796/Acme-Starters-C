@@ -8,14 +8,18 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.tactic.Tactic;
 import acme.entities.tactic.TacticKind;
+import acme.features.fundraiser.strategy.FundraiserStrategyRepository;
 import acme.realms.Fundraiser;
 
 @Service
 public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, Tactic> {
 
 	@Autowired
-	private FundraiserTacticRepository	repository;
-	private Tactic						tactic;
+	private FundraiserTacticRepository		repository;
+	@Autowired
+	private FundraiserStrategyRepository	repositoryStrategy;
+
+	private Tactic							tactic;
 
 
 	@Override
@@ -45,6 +49,21 @@ public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, T
 	@Override
 	public void validate() {
 		super.validateObject(this.tactic);
+		if (!super.getErrors().hasErrors("expectedPercentage")) {
+
+			Double currentTotal = this.repositoryStrategy.sumPercentageByStrategyId(this.tactic.getStrategy().getId());
+			if (currentTotal == null)
+				currentTotal = 0.0;
+
+			Tactic dbTactic = this.repository.findTacticById(this.tactic.getId());
+			Double oldPercentage = dbTactic != null && dbTactic.getExpectedPercentage() != null ? dbTactic.getExpectedPercentage() : 0.0;
+
+			double newTotal = currentTotal - oldPercentage + this.tactic.getExpectedPercentage();
+
+			boolean isValidTotal = newTotal <= 100.0;
+
+			super.state(isValidTotal, "expectedPercentage", "fundraiser.tactic.form.error.percentage-overflow");
+		}
 	}
 
 	@Override

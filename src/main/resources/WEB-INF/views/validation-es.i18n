@@ -11,3 +11,8 @@
 acme.validation.audit-report.duplicated-ticker.message = El ticker ya está en uso
 acme.validation.audit-report.no-audit-sections.message = No se puede publicar sin secciones de auditoría
 acme.validation.audit-report.invalid-start-end-interval.message = Por favor, proporcione un intervalo válido en el futuro
+acme.validation.ticker.invalid.message = Formato de ticker invalido 
+acme.validation.text.invalid.message = Formato invalido de texto
+acme.validation.header.invalid.message = Formato invalido de texto 
+
+fundraiser.tactic.form.error.percentage-overflow = La suma de los porcentajes de todas las tácticas de esta estrategia no puede superar 100.0

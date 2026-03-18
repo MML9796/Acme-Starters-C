@@ -8,4 +8,7 @@
     <acme:list-column code="any.strategy.list.label.name" path="name"/>
     <acme:list-column code="any.strategy.list.label.startMoment" path="startMoment"/>
     <acme:list-column code="any.strategy.list.label.endMoment" path="endMoment"/>
+    <acme:list-hidden path="monthsActive"/>
+	<acme:list-hidden path="expectedPercentage"/>
+	<acme:list-hidden path="moreInfo"/>
 </acme:list>

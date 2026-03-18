@@ -14,7 +14,7 @@ import acme.realms.Fundraiser;
 public class FundraiserStrategyController extends AbstractController<Fundraiser, Strategy> {
 
 	@PostConstruct
-	private void initialise() {
+	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", FundraiserStrategyListService.class);

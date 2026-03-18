@@ -14,7 +14,7 @@ import acme.realms.Fundraiser;
 public class AnyFundraiserController extends AbstractController<Any, Fundraiser> {
 
 	@PostConstruct
-	private void initialise() {
+	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("show", AnyFundraiserShowService.class);

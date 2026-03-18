@@ -6,4 +6,5 @@
     <acme:list-column code="any.tactic.list.label.name" path="name"/>
     <acme:list-column code="any.tactic.list.label.expectedPercentage" path="expectedPercentage"/>
     <acme:list-column code="any.tactic.list.label.kind" path="kind"/>
+    <acme:list-hidden path="notes"/>
 </acme:list>

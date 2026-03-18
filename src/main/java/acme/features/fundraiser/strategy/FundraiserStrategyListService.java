@@ -27,7 +27,11 @@ public class FundraiserStrategyListService extends AbstractService<Fundraiser, S
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		int id;
+		id = super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = this.strategies.stream().allMatch(c -> c.getFundraiser().getId() == id);
+		super.setAuthorised(status);
 	}
 
 	@Override

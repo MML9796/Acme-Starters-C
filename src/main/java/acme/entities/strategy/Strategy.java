@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidScore;
@@ -64,6 +65,7 @@ public class Strategy extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
 
+	@Optional
 	@ValidUrl
 	@Column
 	private String				moreInfo;
@@ -78,6 +80,8 @@ public class Strategy extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
+		if (this.endMoment == null || this.startMoment == null)
+			return 0.0;
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
 		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
@@ -87,10 +91,10 @@ public class Strategy extends AbstractEntity {
 	@ValidScore
 	@Transient
 	public Double getExpectedPercentage() {
-		Double total = this.repository.sumPercentageByStrategyId(this.getId());
-		if (total == null)
+		if (this.repository == null)
 			return 0.0;
-		return total;
+		Double total = this.repository.sumPercentageByStrategyId(this.getId());
+		return total != null ? total : 0.0;
 	}
 
 

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
+import acme.entities.strategy.Strategy;
 import acme.entities.tactic.Tactic;
 import acme.features.any.strategy.AnyStrategyRepository;
 
@@ -32,9 +33,11 @@ public class AnyTacticListService extends AbstractService<Any, Tactic> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = false;
 		int id = super.getRequest().getData("strategyId", int.class);
-		status = !this.strategyRepository.findOneStrategyById(id).getDraftMode();
+		Strategy st = this.strategyRepository.findOneStrategyById(id);
+		if (st != null)
+			status = !st.getDraftMode();
 		super.setAuthorised(status);
 	}
 

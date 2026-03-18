@@ -1,7 +1,6 @@
 
 package acme.features.fundraiser.strategy;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
-import acme.entities.tactic.Tactic;
 import acme.features.fundraiser.tactic.FundraiserTacticRepository;
 import acme.realms.Fundraiser;
 
@@ -54,10 +52,10 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 	public void validate() {
 		super.validateObject(this.strategy);
 		if (!super.getErrors().hasErrors()) {
-			Collection<Tactic> t;
-			t = this.tacticRepository.findAllTacticByStrategyId(this.strategy.getId());
+			int t;
+			t = this.tacticRepository.findAllTacticByStrategyId(this.strategy.getId()).size();
 			Boolean haveTactic;
-			haveTactic = !t.isEmpty();
+			haveTactic = t > 0;
 			super.state(haveTactic, "*", "acme.publish.campaign.noHaveTactic.message");
 			Date mo;
 			mo = MomentHelper.getCurrentMoment();
