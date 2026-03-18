@@ -34,12 +34,9 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 	@Override
 	public void authorise() {
 		boolean status;
-		int inventorId, inventionId;
-		Invention inv;
+		int inventorId;
 		inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		inventionId = super.getRequest().getData("id", int.class);
-		inv = this.repository.findInventionById(inventionId);
-		status = inv != null && inv.getInventor().getId() == inventorId && inv.getDraftMode();
+		status = this.invention != null && this.invention.getInventor().getId() == inventorId && this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}

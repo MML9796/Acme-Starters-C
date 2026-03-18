@@ -21,46 +21,36 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	@Autowired
 	private InventorInventionRepository	repositoryInvention;
 	private Part						part;
+	private Invention					invention;
 
 
 	//AbstractService interface
 	@Override
 	public void load() {
 		int inventionId;
-		Invention inv;
 		inventionId = super.getRequest().getData("inventionId", int.class);
-		inv = this.repositoryInvention.findInventionById(inventionId);
+		this.invention = this.repositoryInvention.findInventionById(inventionId);
 		this.part = super.newObject(Part.class);
-		if (inv != null)
-			this.part.setInvention(inv);
+		if (this.invention != null)
+			this.part.setInvention(this.invention);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
-		String method;
 		int inventorId, inventionId;
 		Invention inv;
-		method = super.getRequest().getMethod();
-		if (method.equals("GET"))
-			status = true;
-		else {
-			inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			inventionId = super.getRequest().getData("inventionId", int.class);
-			inv = this.repositoryInvention.findInventionById(inventionId);
-			status = inv != null && inv.getInventor().getId() == inventorId && inv.getDraftMode();
-		}
+		inventionId = super.getRequest().getData("inventionId", int.class);
+		inv = this.repositoryInvention.findInventionById(inventionId);
+		inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = inv != null && inv.getInventor().getId() == inventorId && inv.getDraftMode();
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
-		int id;
-		Invention invention;
-		id = super.getRequest().getData("inventionId", int.class);
-		invention = this.repositoryInvention.findInventionById(id);
 		super.bindObject(this.part, "name", "description", "cost", "kind");
-		this.part.setInvention(invention);
+		this.part.setInvention(this.invention);
 	}
 
 	@Override
@@ -75,12 +65,10 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
-		int id;
-		id = super.getRequest().getData("inventionId", int.class);
 		super.unbindObject(this.part, "name", "description", "cost", "kind");
-		super.unbindGlobal("inventionId", id);
 		SelectChoices opcionesKind = SelectChoices.from(PartKind.class, this.part.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("inventionId", this.invention.getId());
 	}
 
 }

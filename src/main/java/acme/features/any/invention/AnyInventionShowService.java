@@ -31,7 +31,6 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 		boolean status = false;
 		if (this.invention != null)
 			status = !this.invention.getDraftMode();
-
 		super.setAuthorised(status);
 	}
 

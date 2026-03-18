@@ -31,16 +31,10 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	@Override
 	public void authorise() {
 		boolean status;
-		int inventorId, inventionId;
-		Invention inv;
+		int inventorId;
 
 		inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		inventionId = super.getRequest().getData("id", int.class);
-
-		inv = this.repository.findInventionById(inventionId);
-
-		status = inv != null && inv.getInventor().getId() == inventorId && inv.getDraftMode();
-
+		status = this.invention != null && this.invention.getInventor().getId() == inventorId && this.invention.getDraftMode();
 		super.setAuthorised(status);
 	}
 
@@ -59,7 +53,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		numParts = this.repository.getNumPartsByInventionId(this.invention.getId());
 		publishMoment = MomentHelper.getCurrentMoment();
 
-		super.state(numParts > 0, "*", "acme.validation.invention.no-parts.message");
+		super.state(numParts > 0, "*", "acme.validation.invention.existing-part.message");
 		super.state(publishMoment.before(this.invention.getStartMoment()), "startMoment", "acme.validation.invention.publish-after-start.message");
 	}
 

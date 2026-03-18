@@ -21,7 +21,6 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.invention = this.repository.findInventionById(id);
 	}
@@ -29,11 +28,9 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	@Override
 	public void authorise() {
 		boolean status = false;
-		int id = super.getRequest().getData("id", int.class);
 		int inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		Invention inv = this.repository.findInventionById(id);
-		if (inv != null)
-			status = inv.getInventor().getId() == inventorId;
+		if (this.invention != null)
+			status = this.invention.getInventor().getId() == inventorId;
 
 		super.setAuthorised(status);
 	}
@@ -42,6 +39,5 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	public void unbind() {
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "monthsActive", "cost", "moreInfo", "draftMode");
 		super.unbindGlobal("id", this.invention.getId());
-		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 }

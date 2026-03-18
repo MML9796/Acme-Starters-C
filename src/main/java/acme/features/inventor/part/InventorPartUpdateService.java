@@ -30,11 +30,11 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 	@Override
 	public void authorise() {
 		boolean status;
-		int inventorId, partId;
+		int inventorId, id;
 		Part p;
+		id = super.getRequest().getData("id", int.class);
+		p = this.repository.findPartById(id);
 		inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		partId = super.getRequest().getData("id", int.class);
-		p = this.repository.findPartById(partId);
 		status = p != null && p.getInvention().getInventor().getId() == inventorId && p.getInvention().getDraftMode();
 		super.setAuthorised(status);
 	}
@@ -59,6 +59,8 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 		super.unbindObject(this.part, "name", "description", "cost", "kind");
 		SelectChoices opcionesKind = SelectChoices.from(PartKind.class, this.part.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("draftMode", this.part.getInvention().getDraftMode());
+		super.unbindGlobal("id", this.part.getId());
 
 	}
 

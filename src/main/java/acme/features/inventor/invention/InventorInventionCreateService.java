@@ -34,10 +34,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void bind() {
-		Inventor inventor;
-		inventor = (Inventor) super.getRequest().getPrincipal().getActiveRealm();
 		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
-		this.invention.setInventor(inventor);
 	}
 
 	@Override
@@ -53,7 +50,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 	@Override
 	public void unbind() {
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
-
+		super.unbindGlobal("id", this.invention.getId());
 	}
 
 }

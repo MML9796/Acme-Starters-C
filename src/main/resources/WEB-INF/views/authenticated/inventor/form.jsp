@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-textarea code="authenticated.inventor.form.label.bio" path="bio"/>
 	<acme:form-textbox code="authenticated.inventor.form.label.keyWords" path="keyWords"/>
-	<acme:form-textbox code="authenticated.inventor.form.label.licensed" path="licensed"/>
+	<acme:form-checkbox code="authenticated.inventor.form.label.licensed" path="licensed"/>
 	
 	<jstl:if test="${_command == 'create'}">
 		<acme:submit code="authenticated.inventor.form.button.create" action="/authenticated/inventor/create"/>

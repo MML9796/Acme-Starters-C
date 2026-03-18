@@ -15,8 +15,8 @@
 
     <jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') }">
     <jstl:if test="${draftMode == true}">
-            <acme:submit code="inventor.part.button.update" action="/inventor/part/update?inventionId=${inventionId}"/>
-            <acme:submit code="inventor.part.button.delete" action="/inventor/part/delete?inventionId=${inventionId}"/>
+            <acme:submit code="inventor.part.button.update" action="/inventor/part/update?id=${id}"/>
+            <acme:submit code="inventor.part.button.delete" action="/inventor/part/delete?id=${id}"/>
       </jstl:if>
     </jstl:when>
 

@@ -20,7 +20,8 @@ public class AnyPartListService extends AbstractService<Any, Part> {
 	private AnyPartRepository		repository;
 	@Autowired
 	private AnyInventionRepository	inventionRepository;
-	private Collection<Part>		part;
+	private Collection<Part>		parts;
+	private Invention				inv;
 
 
 	//AbstractService interface
@@ -29,22 +30,21 @@ public class AnyPartListService extends AbstractService<Any, Part> {
 		int id;
 
 		id = super.getRequest().getData("inventionId", int.class);
-		this.part = this.repository.findAllPartByInventionId(id);
+		this.parts = this.repository.findAllPartByInventionId(id);
+		this.inv = this.inventionRepository.findInventionById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status = false;
-		int id = super.getRequest().getData("inventionId", int.class);
-		Invention inv = this.inventionRepository.findInventionById(id);
-		if (inv != null)
-			status = !inv.getDraftMode();
+		if (this.inv != null)
+			status = !this.inv.getDraftMode();
 		super.setAuthorised(status);
 
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.part, "name", "cost");
+		super.unbindObjects(this.parts, "name", "description", "cost", "kind");
 	}
 }

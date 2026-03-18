@@ -21,6 +21,7 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 	@Autowired
 	private InventorInventionRepository	inventionRepository;
 	private Collection<Part>			part;
+	private Invention					invention;
 
 
 	//AbstractService interface
@@ -29,29 +30,23 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 		int id;
 		id = super.getRequest().getData("inventionId", int.class);
 		this.part = this.repository.findAllPartByInventionId(id);
+		this.invention = this.inventionRepository.findInventionById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status = false;
-		int id = super.getRequest().getData("inventionId", int.class);
 		int inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		Invention inv = this.inventionRepository.findInventionById(id);
-		if (inv != null)
-			status = inv.getInventor().getId() == inventorId;
+		if (this.invention != null)
+			status = this.invention.getInventor().getId() == inventorId;
 		super.setAuthorised(status);
 
 	}
 
 	@Override
 	public void unbind() {
-		Invention inv;
-		int id;
-		id = super.getRequest().getData("inventionId", int.class);
-		inv = this.inventionRepository.findInventionById(id);
-		super.unbindObjects(this.part, "name", "cost");
-		super.unbindGlobal("inventionId", id);
-		super.unbindGlobal("draftMode", inv.getDraftMode());
-		super.unbindGlobal("invId", inv.getId());
+		super.unbindObjects(this.part, "name", "description", "cost", "kind");
+		super.unbindGlobal("inventionId", this.invention.getId());
+		super.unbindGlobal("draftMode", this.invention.getDraftMode());
 	}
 }

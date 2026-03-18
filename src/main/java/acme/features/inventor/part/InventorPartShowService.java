@@ -23,7 +23,6 @@ public class InventorPartShowService extends AbstractService<Inventor, Part> {
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.part = this.repository.findPartById(id);
 	}
@@ -41,7 +40,6 @@ public class InventorPartShowService extends AbstractService<Inventor, Part> {
 	public void unbind() {
 		super.unbindObject(this.part, "name", "description", "cost", "kind");
 		super.unbindGlobal("draftMode", this.part.getInvention().getDraftMode());
-		super.unbindGlobal("inventionId", this.part.getInvention().getId());
 		super.unbindGlobal("id", this.part.getId());
 		SelectChoices opcionesKind = SelectChoices.from(PartKind.class, this.part.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);

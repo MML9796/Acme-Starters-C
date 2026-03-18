@@ -23,7 +23,6 @@ public class AnyPartShowService extends AbstractService<Any, Part> {
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.part = this.repository.findPartById(id);
 	}
