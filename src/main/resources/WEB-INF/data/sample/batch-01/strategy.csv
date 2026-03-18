@@ -1,49 +1,58 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:fundraiser
-strategy-01,"ST01-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-02,"ST02-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-03,"ST02-AAAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-04,"ST02-AAAAAAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-05,"PR44-1111111111","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-06,"ST03-AAAAA","B","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-07,"ST04-AAAAA","Ba","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-08,"ST05-AAAAA","Ba","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-09,"ST06-AAAAA","Esta es una estrategia para probar el limite max. Esta es una estrategia p","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-10,"ST07-AAAAA","Esta es una estrategia para probar el limite max. Esta es una estrategia pa","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-11,"ST08-AAAAA","โลเร็ม อิปซัม","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-12,"ST09-AAAAA","لوريم إيبسوم","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-13,"ST10-AAAAA","洛伦·伊普森 ","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-14,"ST11-AAAAA","<marquee>Hacked</marquee>","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-15,"ST12-AAAAA","<script>alert(‘Hacked!’);</script>","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-16,"ST13-AAAAA","'' or 'A' = 'A ","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-17,"ST14-AAAAA","Base Strategy Name","B","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-18,"ST15-AAAAA","Base Strategy Name","Ba","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-19,"ST16-AAAAA","Base Strategy Name","Ba","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-20,"ST17-AAAAA","Base Strategy Name","Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. FINI","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-21,"ST18-AAAAA","Base Strategy Name","Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. FINIS","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-22,"ST19-AAAAA","Base Strategy Name","โลเร็ม อิปซัม","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-23,"ST20-AAAAA","Base Strategy Name","لوريم إيبسوم","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-24,"ST21-AAAAA","Base Strategy Name","洛伦·伊普森 ","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-25,"ST22-AAAAA","Base Strategy Name","<marquee>Hacked</marquee>","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-26,"ST23-AAAAA","Base Strategy Name","<script>alert(‘Hacked!’);</script>","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-02
-strategy-27,"ST24-AAAAA","Base Strategy Name","'' or 'A' = 'A ","2027/01/01 10:00","2027/12/31 10:00","http://base.com",true,fundraiser-01
-strategy-28,"ST25-AAAAA","Base Name","Base Description","2025/01/01 00:00","2025/01/01 00:01","http://base.com",true,fundraiser-02
-strategy-29,"ST26-AAAAA","Base Name","Base Description","2025/01/01 00:01","2025/01/01 00:02","http://base.com",true,fundraiser-01
-strategy-30,"ST27-AAAAA","Base Name","Base Description","2200/12/31 23:58","2200/12/31 23:59","http://base.com",true,fundraiser-02
-strategy-31,"ST28-AAAAA","Base Name","Base Description","2200/12/31 23:57","2200/12/31 23:58","http://base.com",true,fundraiser-01
-strategy-32,"ST29-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://a.b",true,fundraiser-02
-strategy-33,"ST30-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",true,fundraiser-02
-strategy-34,"ST31-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",true,fundraiser-01
-strategy-35,"ST32-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://www.lorem-ipsum.org",true,fundraiser-02
-strategy-36,"ST33-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","https://www.lorem-ipsum.org",true,fundraiser-01
-strategy-37,"ST34-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://www.lorem-ipsum.org/dolor/sit.html",true,fundraiser-02
-strategy-38,"ST35-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://www.lorem-ipsum.org/dolor/sit.html#dolor",true,fundraiser-01
-strategy-39,"ST36-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org?a=1&b=2",true,fundraiser-02
-strategy-40,"ST37-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org?",true,fundraiser-01
-strategy-41,"ST38-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org?a",true,fundraiser-02
-strategy-42,"ST39-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org?a&b",true,fundraiser-01
-strategy-43,"ST40-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org/",true,fundraiser-02
-strategy-44,"ST41-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org/a",true,fundraiser-01
-strategy-45,"ST42-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org/a/b",true,fundraiser-02
-strategy-46,"ST43-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org/a/b?",true,fundraiser-01
-strategy-47,"ST44-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://example.org/a/b?a&b",true,fundraiser-02
-strategy-48,"ST45-AAAAA","Base Name","Base Description","2027/01/01 10:00","2027/12/31 10:00","http://base.com",false,fundraiser-01
+strategy-01,ST01-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-02,ST02-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-03,ST02-AAAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-04,ST02-AAAAAAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-05,PR44-1111111111,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-06,ST03-AAAAA,B,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-07,ST04-AAAAA,Ba,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-08,ST05-AAAAA,Ba,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-09,ST06-AAAAA,Esta es una estrategia para probar el limite max. Esta es una estrategia p,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-10,ST07-AAAAA,Esta es una estrategia para probar el limite max. Esta es una estrategia pa,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-11,ST08-AAAAA,โลเร็ม อิปซัม,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-12,ST09-AAAAA,لوريم إيبسوم,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-13,ST10-AAAAA,洛伦·伊普森,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-14,ST11-AAAAA,<marquee>Hacked</marquee>,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-15,ST12-AAAAA,<script>alert(‘Hacked!’);</script>,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-16,ST13-AAAAA,'' or 'A' = 'A,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-17,ST14-AAAAA,Base Strategy Name,B,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-18,ST15-AAAAA,Base Strategy Name,Ba,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-19,ST16-AAAAA,Base Strategy Name,Ba,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-20,ST17-AAAAA,Base Strategy Name,Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. FINI,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-21,ST18-AAAAA,Base Strategy Name,Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. FINIS,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-22,ST19-AAAAA,Base Strategy Name,โลเร็ม อิปซัม,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-23,ST20-AAAAA,Base Strategy Name,لوريم إيبسوم,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-24,ST21-AAAAA,Base Strategy Name,洛伦·伊普森,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-25,ST22-AAAAA,Base Strategy Name,<marquee>Hacked</marquee>,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-26,ST23-AAAAA,Base Strategy Name,<script>alert(‘Hacked!’);</script>,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-02
+strategy-27,ST24-AAAAA,Base Strategy Name,'' or 'A' = 'A,2027/01/01 10:00,2027/12/31 10:00,http://base.com,true,fundraiser-01
+strategy-28,ST25-AAAAA,Base Name,Base Description,2025/01/01 00:00,2025/01/01 00:01,http://base.com,true,fundraiser-02
+strategy-29,ST26-AAAAA,Base Name,Base Description,2025/01/01 00:01,2025/01/01 00:02,http://base.com,true,fundraiser-01
+strategy-30,ST27-AAAAA,Base Name,Base Description,2200/12/31 23:58,2200/12/31 23:59,http://base.com,true,fundraiser-02
+strategy-31,ST28-AAAAA,Base Name,Base Description,2200/12/31 23:57,2200/12/31 23:58,http://base.com,true,fundraiser-01
+strategy-32,ST29-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://a.b,true,fundraiser-02
+strategy-33,ST30-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",true,fundraiser-02
+strategy-34,ST31-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",true,fundraiser-01
+strategy-35,ST32-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://www.lorem-ipsum.org,true,fundraiser-02
+strategy-36,ST33-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,https://www.lorem-ipsum.org,true,fundraiser-01
+strategy-37,ST34-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://www.lorem-ipsum.org/dolor/sit.html,true,fundraiser-02
+strategy-38,ST35-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://www.lorem-ipsum.org/dolor/sit.html#dolor,true,fundraiser-01
+strategy-39,ST36-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org?a=1&b=2,true,fundraiser-02
+strategy-40,ST37-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org?,true,fundraiser-01
+strategy-41,ST38-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org?a,true,fundraiser-02
+strategy-42,ST39-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org?a&b,true,fundraiser-01
+strategy-43,ST40-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org/,true,fundraiser-02
+strategy-44,ST41-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org/a,true,fundraiser-01
+strategy-45,ST42-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org/a/b,true,fundraiser-02
+strategy-46,ST43-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org/a/b?,true,fundraiser-01
+strategy-47,ST44-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://example.org/a/b?a&b,true,fundraiser-02
+strategy-48,ST45-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-01
+strategy-49,ST46-AAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-50,ST47-AAAAAAAAA,Base Name,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-51,ST48-AAAAA,B,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-52,ST49-AAAAA,Ba,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-53,ST50-AAAAA,Esta es una estrategia para probar el limite max. Esta es una estrategia pa,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-54,ST51-AAAAA,لوريم إيبسوم,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-55,ST52-AAAAA,<marquee>Hacked</marquee>,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-56,ST53-AAAAA,'' or 'A' = 'A,Base Description,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02
+strategy-58,ST54-AAAAA,Base Strategy Name,Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. Esta es una estrategia para probar el limite max. FINI,2027/01/01 10:00,2027/12/31 10:00,http://base.com,false,fundraiser-02

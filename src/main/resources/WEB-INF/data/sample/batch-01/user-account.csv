@@ -43,9 +43,9 @@ user-account-auditor-32,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח
 user-account-spokesperson-01,true,"UserIdentity{name: 'Sandra', surname: 'Spokesperson', email: 'sandra@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'Nuria', surname: 'Pòrtavotz', email: 'nuria@acme.com'}",spokesperson2,spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Juanan', surname: 'דובר', email: 'juanan@acme.com'}",spokesperson3,spokesperson3
-user-account-fundraiser-01,true,"UserIdentity{name: 'Juan', surname: 'Fundraiser', email: 'juan@acme.com'}",fundraiser1, fundraiser1
-user-account-fundraiser-02,true,"UserIdentity{name: 'Antonio', surname: 'Fundraiser', email: 'antonio@acme.com'}",fundraiser2, fundraiser2
-user-account-fundraiser-03,true,"UserIdentity{name: 'Sandra', surname: 'Fundraiser', email: 'sandra@acme.com'}",fundraiser3, fundraiser3
+user-account-fundraiser-01,true,"UserIdentity{name: 'Juan', surname: 'Fundraiser', email: 'juan@acme.com'}",fundraiser1,fundraiser1
+user-account-fundraiser-02,true,"UserIdentity{name: 'Antonio', surname: 'Fundraiser', email: 'antonio@acme.com'}",fundraiser2,fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Sandra', surname: 'Fundraiser', email: 'sandra@acme.com'}",fundraiser3,fundraiser3
 user-account-inventor-01,true,"UserIdentity{name: 'Elena', surname: 'Torres', email: 'elena@acme.com'}",inventor1,inventor1
 user-account-inventor-02,true,"UserIdentity{name: 'Hiro', surname: '山本', email: 'hiro@acme.com'}",inventor2,inventor2
 user-account-inventor-03,true,"UserIdentity{name: 'Omar', surname: 'الحكيم', email: 'omar@acme.com'}",inventor3,inventor3

@@ -1,0 +1,10 @@
+any.part.list.title = Lista de partes
+any.part.form.title = Detalles de la parte
+
+any.part.list.label.name = Nombre
+any.part.list.label.cost = Coste
+
+any.part.form.label.name = Nombre
+any.part.form.label.description = Descripcion
+any.part.form.label.cost = Coste
+any.part.form.label.kind = Tipo

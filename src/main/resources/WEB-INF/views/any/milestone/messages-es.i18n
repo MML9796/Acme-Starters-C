@@ -1,0 +1,10 @@
+any.milestone.list.title = Lista de Hitos
+any.milestone.form.title = Detalles del Hito
+
+any.milestone.list.label.title = Título	
+any.milestone.list.label.achievements = Logros
+
+any.milestone.form.label.title = Título
+any.milestone.form.label.achievements = Logros
+any.milestone.form.label.effort = Media
+any.milestone.form.label.kind = Tipo

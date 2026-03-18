@@ -1,0 +1,10 @@
+sponsor.donation.list.title = Donation list
+sponsor.donation.form.title = Donation details
+
+sponsor.donation.list.label.name = Name
+sponsor.donation.list.label.notes = Notes
+
+sponsor.donation.form.label.name = Name
+sponsor.donation.form.label.notes = Notes
+sponsor.donation.form.label.money = Money
+sponsor.donation.form.label.kind = Kind

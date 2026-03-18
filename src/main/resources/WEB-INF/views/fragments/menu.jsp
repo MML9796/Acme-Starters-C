@@ -18,12 +18,16 @@
 
 <acme:menu-bar>
 	<acme:menu-left>
-		<acme:menu-option code="master.menu.any" access="true">
-			<acme:menu-suboption code="master.menu.any.audit-report.list" action="/any/audit-report/list"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
-			<acme:menu-suboption code="master.menu.auditor.audit-report.list" action="/auditor/audit-report/list"/>
+	  <acme:menu-option code="master.menu.any">
+			<acme:menu-suboption code="master.menu.campaign.list" action="/any/campaign/list"/>
+	    <acme:menu-suboption code="master.menu.any.strategy.list" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.invention.list" action="/any/invention/list"/>
+      <acme:menu-suboption code="master.menu.sponsorship.list" action="/any/sponsorship/list"/>
+      <acme:menu-suboption code="master.menu.any.audit-report.list" action="/any/audit-report/list"/>
+	  </acme:menu-option>
+	
+		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -42,17 +46,39 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.campaign" access="hasRealm('Spokesperson')">
+			<acme:menu-suboption code="master.menu.campaign.myList" action="/spokesperson/campaign/list"/>
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.invention.list" action="/inventor/invention/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.fundraiser.strategy.list" action="/fundraiser/strategy/list"/>
+		</acme:menu-option>	
+    
+    <acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.sponsorship.list" action="/sponsor/sponsorship/list"/>
+		</acme:menu-option>
+    
+    <acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.audit-report.list" action="/auditor/audit-report/list"/>
+    </acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>		
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-profile" action="/authenticated/user-account/update"/>
-			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create" access="!hasRealm('Auditor')"/>
-			<acme:menu-suboption code="master.menu.user-account.auditor-profile" action="/authenticated/auditor/update" access="hasRealm('Auditor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRealm('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.provider-profile" action="/authenticated/provider/update" access="hasRealm('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRealm('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer-profile" action="/authenticated/consumer/update" access="hasRealm('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-spokesperson" action="/authenticated/spokesperson/create" access="!hasRealm('Spokesperson')"/>
+			<acme:menu-suboption code="master.menu.user-account.spokesperson-profile" action="/authenticated/spokesperson/update" access="hasRealm('Spokesperson')"/>
+      <acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create" access="!hasRealm('Auditor')"/>
+			<acme:menu-suboption code="master.menu.user-account.auditor-profile" action="/authenticated/auditor/update" access="hasRealm('Auditor')"/>
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>

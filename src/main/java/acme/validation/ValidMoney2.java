@@ -11,7 +11,9 @@ import javax.validation.Payload;
 
 import acme.validators.MoneyValidator2;
 
-@Target(ElementType.FIELD)
+@Target({
+	ElementType.FIELD, ElementType.METHOD
+})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = MoneyValidator2.class)
 

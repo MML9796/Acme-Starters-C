@@ -46,3 +46,31 @@ master.menu.user-account.become-provider = Hacerse proveedor
 master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.consumer-profile = Perfil de consumidor
+master.menu.user-account.become-spokesperson = Hazte portavoz
+master.menu.user-account.spokesperson-profile = Perfil de portavoz
+
+#master.menu.any ##############################################
+
+master.menu.any = Cualquiera
+master.menu.campaign.list = Lista de Campañas
+master.menu.invention.list = Lista de Invenciones
+master.menu.strategy.list = Lista de estrategias
+master.menu.sponsorship.list = Lista de Patrocinios
+
+#master.menu.inventor ##############################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = Mis invenciones
+
+#master.menu.fundraiser ##############################################
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.strategy.list = Mis estrategias
+
+#master.menu.campaign ##############################################
+master.menu.campaign.myList = Mis Campañas
+master.menu.campaign = Campañas
+
+#master.menu.sponsor ##############################################
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.sponsorship.list = Mis Patrocinios

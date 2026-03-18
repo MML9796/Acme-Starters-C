@@ -22,6 +22,7 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Sponsor;
 import acme.validation.ValidHeader;
+import acme.validation.ValidMoney2;
 import acme.validation.ValidSponsorship;
 import acme.validation.ValidText;
 import acme.validation.ValidTicker;
@@ -76,19 +77,26 @@ public class Sponsorship extends AbstractEntity {
 	private Boolean					draftMode;
 
 
+	@Mandatory
+	@Valid
 	@Transient
-	public double getMonthsActive() {
+	public Double getMonthsActive() {
 		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
 		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(meses * 10.0) / 10.0;
 	}
 
+	@Mandatory
+	@ValidMoney2(min = 0.0, max = 1000000.0)
 	@Transient
 	public Money getTotalMoney() {
 
 		Double sum = this.repository.getSumTotalMoneyBySponsorship(this.getId());
 		Money resultado = new Money();
-		resultado.setAmount(sum);
+		if (sum == null)
+			resultado.setAmount(0.0);
+		else
+			resultado.setAmount(sum);
 		resultado.setCurrency("EUR");
 		return resultado;
 	}
