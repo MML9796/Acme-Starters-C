@@ -57,7 +57,7 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 		int id;
 		id = super.getRequest().getData("sponsorshipId", int.class);
 		spsh = this.sponsorshipRepository.findSponsorshipById(id);
-		super.unbindObjects(this.donation, "name", "notes");
+		super.unbindObjects(this.donation, "name", "notes", "money", "kind");
 		super.unbindGlobal("draftMode", spsh.getDraftMode());
 		super.unbindGlobal("sponsorshipId", spsh.getId());
 	}

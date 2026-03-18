@@ -4,8 +4,10 @@ package acme.features.sponsor.donation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.donation.Donation;
+import acme.entities.donation.DonationKind;
 import acme.realms.Sponsor;
 
 @Service
@@ -55,6 +57,10 @@ public class SponsorDonationDeleteService extends AbstractService<Sponsor, Donat
 	@Override
 	public void unbind() {
 		super.unbindObject(this.donation, "name", "notes", "money", "kind");
+		SelectChoices opcionesKind = SelectChoices.from(DonationKind.class, this.donation.getKind());
+		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("draftMode", this.donation.getSponsorship().getDraftMode());
+		super.unbindGlobal("id", this.donation.getId());
 
 	}
 }

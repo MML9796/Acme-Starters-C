@@ -30,11 +30,11 @@ public class SponsorDonationUpdateService extends AbstractService<Sponsor, Donat
 	@Override
 	public void authorise() {
 		boolean status;
-		int sponsorId, donationId;
+		int sponsorId, id;
 		Donation d;
 		sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		donationId = super.getRequest().getData("id", int.class);
-		d = this.repository.findDonationById(donationId);
+		id = super.getRequest().getData("id", int.class);
+		d = this.repository.findDonationById(id);
 		status = d != null && d.getSponsorship().getSponsor().getId() == sponsorId && d.getSponsorship().getDraftMode();
 		super.setAuthorised(status);
 	}
@@ -59,6 +59,8 @@ public class SponsorDonationUpdateService extends AbstractService<Sponsor, Donat
 		super.unbindObject(this.donation, "name", "notes", "money", "kind");
 		SelectChoices opcionesKind = SelectChoices.from(DonationKind.class, this.donation.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("draftMode", this.donation.getSponsorship().getDraftMode());
+		super.unbindGlobal("id", this.donation.getId());
 
 	}
 }

@@ -46,7 +46,7 @@ public class AnyDonationListService extends AbstractService<Any, Donation> {
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.donation, "name", "notes");
+		super.unbindObjects(this.donation, "name", "notes", "money", "kind");
 	}
 
 }

@@ -33,13 +33,13 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 		boolean status;
 
 		int donationId = super.getRequest().getData("id", int.class);
-		Donation donation = this.repository.findDonationById(donationId);
+		Donation d = this.repository.findDonationById(donationId);
 		int principalId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		if (donation == null)
+		if (d == null)
 			status = false;
 		else
-			status = donation.getSponsorship().getSponsor().getId() == principalId;
+			status = d.getSponsorship().getSponsor().getId() == principalId;
 
 		super.setAuthorised(status);
 	}
