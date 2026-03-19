@@ -12,7 +12,7 @@ spokesperson.campaign.form.label.description = Descripción
 spokesperson.campaign.form.label.startMoment = Comienzo
 spokesperson.campaign.form.label.endMoment = Fin
 spokesperson.campaign.form.label.monthsActive = Meses Activos
-anspokespersony.campaign.form.label.effort = Esfuerzo 
+spokesperson.campaign.form.label.effort = Esfuerzo 
 spokesperson.campaign.form.label.moreInfo = Más Info
 spokesperson.campaign.button.milestone = Hito
 

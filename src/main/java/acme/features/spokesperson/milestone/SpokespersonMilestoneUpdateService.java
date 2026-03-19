@@ -59,6 +59,8 @@ public class SpokespersonMilestoneUpdateService extends AbstractService<Spokespe
 		super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
 		SelectChoices opcionesKind = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("id", this.milestone.getId());
+		super.unbindGlobal("draftMode", this.milestone.getCampaign().getDraftMode());
 
 	}
 
