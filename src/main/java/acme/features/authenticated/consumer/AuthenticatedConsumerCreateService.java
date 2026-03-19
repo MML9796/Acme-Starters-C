@@ -1,5 +1,5 @@
 /*
- * AuthenticatedConsumerCreateService.java
+ * AuthenticatedAuditorCreateService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *

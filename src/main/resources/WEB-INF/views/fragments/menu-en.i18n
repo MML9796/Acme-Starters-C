@@ -8,6 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+# master.menu.any #############################################################
+
+master.menu.any = Anyone
+master.menu.invention.list = Invention list
+master.menu.campaign.list = Campaign list
+master.menu.any.strategy.list = Strategy list
+master.menu.sponsorship.list = Sponsorship list
+master.menu.any.audit-report.list = Published audit reports
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
@@ -26,10 +35,35 @@ master.menu.administrator.shut-system-down = Shut system down
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 
-# master.menu.consumer ##########################################################
+# master.menu.consumer ########################################################
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = My inventions
+
+# master.menu.campaign ########################################################
+
+master.menu.campaign.myList = My Campaigns
+master.menu.campaign = Campaign
+
+# master.menu.fundraiser ######################################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.strategy.list = My strategies
+
+# master.menu.sponsor #########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.sponsorship.list = My sponsorships
+
+# master.menu.auditor #########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.audit-report.list = My audit reports
 
 # master.menu.user-account ####################################################
 
@@ -41,6 +75,8 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
 master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor-profile = Auditor profile
 master.menu.user-account.become-fundraiser = Become a fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile
 master.menu.user-account.become-sponsor = Become a sponsor

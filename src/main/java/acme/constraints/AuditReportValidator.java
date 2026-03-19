@@ -1,5 +1,5 @@
 
-package acme.validators;
+package acme.constraints;
 
 import javax.validation.ConstraintValidatorContext;
 
@@ -10,7 +10,6 @@ import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.audit_reports.AuditReport;
 import acme.entities.audit_reports.AuditReportRepository;
-import acme.validation.ValidAuditReport;
 
 @Validator
 public class AuditReportValidator extends AbstractValidator<ValidAuditReport, AuditReport> {
@@ -46,7 +45,6 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 
 				super.state(context, uniqueAuditReport, "ticker", "acme.validation.audit-report.duplicated-ticker.message");
 			}
-
 			{
 				if (auditReport.getDraftMode() != null && !auditReport.getDraftMode()) {
 					boolean atLeastOneAuditSection;
@@ -59,17 +57,13 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 				}
 			}
 			{
-				boolean correctStartEndFutureInterval;
-
 				if (auditReport.getStartMoment() != null && auditReport.getEndMoment() != null) {
-					if (auditReport.getDraftMode() != null && auditReport.getDraftMode())
-						correctStartEndFutureInterval = MomentHelper.isAfter(auditReport.getEndMoment(), auditReport.getStartMoment());
-					else
-						correctStartEndFutureInterval = MomentHelper.isFuture(auditReport.getStartMoment()) && MomentHelper.isAfter(auditReport.getEndMoment(), auditReport.getStartMoment());
-				} else
-					correctStartEndFutureInterval = false;
+					boolean correctStartEndFutureInterval;
 
-				super.state(context, correctStartEndFutureInterval, "startMoment, endMoment", "acme.validation.audit-report.invalid-start-end-interval.message");
+					correctStartEndFutureInterval = MomentHelper.isAfter(auditReport.getEndMoment(), auditReport.getStartMoment());
+
+					super.state(context, correctStartEndFutureInterval, "startMoment", "acme.validation.audit-report.invalid-start-end-interval.message");
+				}
 			}
 			result = !super.hasErrors(context);
 		}

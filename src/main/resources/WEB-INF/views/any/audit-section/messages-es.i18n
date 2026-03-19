@@ -1,0 +1,11 @@
+any.audit-section.form.title = Detalles de sección de auditoría
+any.audit-section.list.title = Listado de secciones de auditoría
+
+any.audit-section.form.label.name = Nombre:
+any.audit-section.form.label.notes = Notas:
+any.audit-section.form.label.hours = Horas:
+any.audit-section.form.label.kind = Tipo de sección:
+
+any.audit-section.list.label.name = Nombre
+any.audit-section.list.label.hours = Horas
+any.audit-section.list.label.kind = Tipo de sección

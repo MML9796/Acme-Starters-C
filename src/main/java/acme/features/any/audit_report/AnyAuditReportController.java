@@ -1,0 +1,26 @@
+
+package acme.features.any.audit_report;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+
+import acme.client.components.principals.Any;
+import acme.client.controllers.AbstractController;
+import acme.entities.audit_reports.AuditReport;
+
+@Controller
+public class AnyAuditReportController extends AbstractController<Any, AuditReport> {
+
+	// Constructors -----------------------------------------------------------
+
+	@PostConstruct
+	protected void initialise() {
+		super.setMediaType(MediaType.TEXT_HTML);
+
+		super.addBasicCommand("list", AnyAuditReportListService.class);
+		super.addBasicCommand("show", AnyAuditReportShowService.class);
+	}
+
+}

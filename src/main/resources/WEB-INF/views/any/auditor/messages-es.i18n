@@ -1,0 +1,8 @@
+any.auditor.form.title = Detalles de auditor
+
+any.auditor.form.label.name = Nombre:
+any.auditor.form.label.surname = Apellidos:
+any.auditor.form.label.email = Email:
+any.auditor.form.label.firm = Firma:
+any.auditor.form.label.highlights = Destacados:
+any.auditor.form.label.solicitor = Solicitador
