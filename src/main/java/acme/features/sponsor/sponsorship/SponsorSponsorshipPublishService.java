@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.sponsorship.Sponsorship;
-import acme.features.sponsor.donation.SponsorDonationRepository;
 import acme.realms.Sponsor;
 
 @Service
@@ -18,8 +17,6 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 	//Internal state
 	@Autowired
 	private SponsorSponsorshipRepository	repository;
-	@Autowired
-	private SponsorDonationRepository		donationRepository;
 	private Sponsorship						sponsorship;
 
 
