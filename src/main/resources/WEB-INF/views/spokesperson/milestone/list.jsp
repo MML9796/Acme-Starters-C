@@ -5,6 +5,9 @@
 <acme:list>
 	<acme:list-column code="spokesperson.milestone.list.label.title" path="title"/>
 	<acme:list-column code="spokesperson.milestone.list.label.achievements" path="achievements"/>
+	<acme:list-hidden path="effort"/>
+	<acme:list-hidden  path="kind"/>
+	
 </acme:list>
 
  <jstl:if test="${draftMode == true}">

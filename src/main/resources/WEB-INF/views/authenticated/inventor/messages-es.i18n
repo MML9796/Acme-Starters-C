@@ -1,0 +1,10 @@
+# messages-es.i18n
+#
+authenticated.inventor.form.title = Formulario de inventor
+
+authenticated.inventor.form.label.bio = Bio
+authenticated.inventor.form.label.keyWords = Palabras clave
+authenticated.inventor.form.label.licensed = Licencia
+
+authenticated.inventor.form.button.create = Registro
+authenticated.inventor.form.button.update = Actualizacion

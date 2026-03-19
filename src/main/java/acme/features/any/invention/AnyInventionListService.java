@@ -22,7 +22,7 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 	//AbstractService interface
 	@Override
 	public void load() {
-		this.invention = this.repository.findAllInvention();
+		this.invention = this.repository.findAllInventionPublished();
 	}
 
 	@Override
@@ -32,6 +32,6 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.invention, "ticker", "name", "startMoment", "endMoment");
+		super.unbindObjects(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 }

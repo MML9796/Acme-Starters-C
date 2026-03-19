@@ -7,4 +7,8 @@
 	<acme:list-column code="sponsor.sponsorship.list.label.name" path="name"/>
 	<acme:list-column code="sponsor.sponsorship.list.label.startMoment" path="startMoment"/>
 	<acme:list-column code="sponsor.sponsorship.list.label.endMoment" path="endMoment"/>
+	<acme:list-hidden path="description"/>
+	<acme:list-hidden path="moreInfo"/>
 </acme:list>
+
+<acme:button code="sponsor.sponsorship.button.create" action="/sponsor/sponsorship/create"/>

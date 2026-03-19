@@ -5,7 +5,7 @@
 <acme:form>
 	<acme:form-textbox code="spokesperson.campaign.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="spokesperson.campaign.form.label.name" path="name"/>
-	<acme:form-textbox code="spokesperson.campaign.form.label.description" path="description"/>
+	<acme:form-textarea code="spokesperson.campaign.form.label.description" path="description"/>
 	<acme:form-moment code="spokesperson.campaign.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="spokesperson.campaign.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="spokesperson.campaign.form.label.moreInfo" path="moreInfo"/>

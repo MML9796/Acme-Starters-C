@@ -5,12 +5,12 @@
 <acme:form>
 	<acme:form-textbox code="any.invention.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="any.invention.form.label.name" path="name"/>
-	<acme:form-textbox code="any.invention.form.label.description" path="description"/>
-	<acme:form-textbox code="any.invention.form.label.startMoment" path="startMoment"/>
-	<acme:form-textbox code="any.invention.form.label.endMoment" path="endMoment"/>
-	<acme:form-textbox code="any.invention.form.label.monthsActive" path="monthsActive"/>
-	<acme:form-textbox code="any.invention.form.label.cost" path="cost"/>
-	<acme:form-textbox code="any.invention.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textarea code="any.invention.form.label.description" path="description"/>
+	<acme:form-moment code="any.invention.form.label.startMoment" path="startMoment"/>
+	<acme:form-moment code="any.invention.form.label.endMoment" path="endMoment"/>
+	<acme:form-double code="any.invention.form.label.monthsActive" path="monthsActive"/>
+	<acme:form-money code="any.invention.form.label.cost" path="cost"/>
+	<acme:form-url code="any.invention.form.label.moreInfo" path="moreInfo"/>
 	<acme:button code="any.invention.button.parts" action="/any/part/list?inventionId=${id}"/>
 	<acme:button code="any.invention.button.inventor" action="/any/inventor/show?id=${inventorId}"/>
 </acme:form>

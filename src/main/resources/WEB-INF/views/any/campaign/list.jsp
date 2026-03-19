@@ -7,4 +7,7 @@
 	<acme:list-column code="any.campaign.list.label.name" path="name"/>
 	<acme:list-column code="any.campaign.list.label.startMoment" path="startMoment"/>
 	<acme:list-column code="any.campaign.list.label.endMoment" path="endMoment"/>
+	<acme:list-hidden path="monthsActive"/>
+	<acme:list-hidden path="effort"/>
+	<acme:list-hidden path="moreInfo"/>
 </acme:list>

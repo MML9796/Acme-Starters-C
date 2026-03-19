@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-textbox code="authenticated.spokesperson.form.label.cv" path="cv"/>
 	<acme:form-textbox code="authenticated.spokesperson.form.label.achievements" path="achievements"/>
-	<acme:form-textbox code="authenticated.spokesperson.form.label.licensed" path="licensed"/>
+	<acme:form-checkbox code="authenticated.spokesperson.form.label.licensed" path="licensed"/>
 	
 	<jstl:if test="${_command == 'create'}">
 		<acme:submit code="authenticated.spokesperson.form.button.create" action="/authenticated/spokesperson/create"/>

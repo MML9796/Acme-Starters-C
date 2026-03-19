@@ -33,28 +33,19 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			result = true;
 		else {
 
-			if (!invention.getDraftMode()) {
-				{
-					boolean uniqueInvention;
-					Invention existingInvention;
-					existingInvention = this.repository.findInventionByTicker(invention.getTicker());
-					uniqueInvention = existingInvention == null || existingInvention.equals(invention);
-					super.state(context, uniqueInvention, "ticker", "acme.validation.invention.duplicated-ticker.message");
-				}
+			{
+				boolean uniqueInvention;
+				Invention existingInvention;
+				existingInvention = this.repository.findInventionByTicker(invention.getTicker());
+				uniqueInvention = existingInvention == null || existingInvention.equals(invention);
+				super.state(context, uniqueInvention, "ticker", "acme.validation.invention.duplicated-ticker.message");
+			}
 
-				{
-					if (invention.getEndMoment() != null && invention.getStartMoment() != null) {
-						boolean correctDates;
-						correctDates = invention.getEndMoment().after(invention.getStartMoment());
-						super.state(context, correctDates, "endMoment", "acme.validation.invention.invalid-dates.message");
-					}
-				}
-
-				{
-					boolean hasParts = true;
-					Integer parts = this.repository.findPartsByInventionId(invention.getId());
-					hasParts = parts > 0 && parts != null;
-					super.state(context, hasParts, "*", "acme.validation.invention.existing-part.message");
+			{
+				if (invention.getEndMoment() != null && invention.getStartMoment() != null) {
+					boolean correctDates;
+					correctDates = invention.getEndMoment().after(invention.getStartMoment());
+					super.state(context, correctDates, "endMoment", "acme.validation.invention.invalid-dates.message");
 				}
 			}
 

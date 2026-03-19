@@ -15,6 +15,9 @@ public interface SpokespersonMilestoneRepository extends AbstractRepository {
 	@Query("select m from Milestone m where m.campaign.id = :id")
 	Collection<Milestone> findAllMilestoneByCampaignId(int id);
 
+	@Query("select count(m) from Milestone m where m.campaign.id = :id")
+	Double countAllMilestoneByCampaignId(int id);
+
 	@Query("select m from Milestone m where m.id=:id")
 	Milestone findMilestoneById(int id);
 

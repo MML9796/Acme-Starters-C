@@ -14,5 +14,4 @@ acme.validation.audit-report.invalid-start-end-interval.message = Please provide
 acme.validation.ticker.invalid.message = Invalid ticker format
 acme.validation.text.invalid.message = Invalid text format
 acme.validation.header.invalid.message = Invalid text format
-
 fundraiser.tactic.form.error.percentage-overflow = The sum of all tactic percentages in this strategy cannot exceed 100.0

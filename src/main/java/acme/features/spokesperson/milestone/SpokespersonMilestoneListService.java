@@ -35,9 +35,17 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
-		id = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.milestone.stream().allMatch(m -> m.getCampaign().getSpokesperson().getId() == id);
+		int id, campaignId;
+		Campaign c;
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		c = this.campaignRepository.findCampaignById(campaignId);
+		if (c == null)
+			status = false;
+		else {
+			id = super.getRequest().getPrincipal().getActiveRealm().getId();
+			status = this.milestone.stream().allMatch(m -> m.getCampaign().getSpokesperson().getId() == id);
+
+		}
 		super.setAuthorised(status);
 
 	}

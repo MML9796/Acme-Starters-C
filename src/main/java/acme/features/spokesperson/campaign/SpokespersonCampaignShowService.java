@@ -31,9 +31,13 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 		boolean status;
 		int idC;
 		int idS;
-		idC = this.campaign.getSpokesperson().getId();
-		idS = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = idC == idS;
+		if (this.campaign == null)
+			status = false;
+		else {
+			idC = this.campaign.getSpokesperson().getId();
+			idS = super.getRequest().getPrincipal().getActiveRealm().getId();
+			status = idC == idS;
+		}
 		super.setAuthorised(status);
 	}
 

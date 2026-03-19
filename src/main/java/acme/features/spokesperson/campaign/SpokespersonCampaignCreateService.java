@@ -29,20 +29,7 @@ public class SpokespersonCampaignCreateService extends AbstractService<Spokesper
 
 	@Override
 	public void authorise() {
-		boolean status;
-		String method;
-		int spokespersonId, campaignId;
-		Campaign ca;
-		method = super.getRequest().getMethod();
-		if (method.equals("GET"))
-			status = true;
-		else {
-			spokespersonId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			campaignId = super.getRequest().getData("id", int.class);
-			ca = this.repository.findCampaignById(campaignId);
-			status = campaignId == 0 || ca != null && ca.getSpokesperson().getId() == spokespersonId;
-		}
-		super.setAuthorised(status);
+		super.setAuthorised(true);
 	}
 
 	@Override

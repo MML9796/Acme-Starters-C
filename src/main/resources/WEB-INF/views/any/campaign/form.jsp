@@ -5,11 +5,11 @@
 <acme:form>
 	<acme:form-textbox code="any.campaign.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="any.campaign.form.label.name" path="name"/>
-	<acme:form-textbox code="any.campaign.form.label.description" path="description"/>
-	<acme:form-textbox code="any.campaign.form.label.startMoment" path="startMoment"/>
-	<acme:form-textbox code="any.campaign.form.label.endMoment" path="endMoment"/>
-	<acme:form-textbox code="any.campaign.form.label.monthsActive" path="monthsActive"/>
-	<acme:form-textbox code="any.campaign.form.label.effort" path="effort"/>
+	<acme:form-textarea code="any.campaign.form.label.description" path="description"/>
+	<acme:form-moment code="any.campaign.form.label.startMoment" path="startMoment"/>
+	<acme:form-moment code="any.campaign.form.label.endMoment" path="endMoment"/>
+	<acme:form-moment code="any.campaign.form.label.monthsActive" path="monthsActive"/>
+	<acme:form-double code="any.campaign.form.label.effort" path="effort"/>
 	<acme:form-textbox code="any.campaign.form.label.moreInfo" path="moreInfo"/>
 	<acme:button code="any.campaign.button.milestone" action="/any/milestone/list?campaignId=${id}"/>
 	<acme:button code="any.campaign.button.spokesperson" action="/any/spokesperson/show?id=${spokespersonId}"/>

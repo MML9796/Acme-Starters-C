@@ -7,6 +7,9 @@
 	<acme:list-column code="spokesperson.campaign.list.label.name" path="name"/>
 	<acme:list-column code="spokesperson.campaign.list.label.startMoment" path="startMoment"/>
 	<acme:list-column code="spokesperson.campaign.list.label.endMoment" path="endMoment"/>
+	<acme:list-hidden path="monthsActive"/>
+	<acme:list-hidden path="effort"/>
+	<acme:list-hidden path="moreInfo"/>
 </acme:list>
 
 <acme:button code="spokesperson.campaign.button.create" action="/spokesperson/campaign/create"/>

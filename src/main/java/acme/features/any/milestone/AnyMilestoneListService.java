@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
+import acme.entities.campaign.Campaign;
 import acme.entities.milestones.Milestone;
 import acme.features.any.campaign.AnyCampaignRepository;
 
@@ -35,16 +36,21 @@ public class AnyMilestoneListService extends AbstractService<Any, Milestone> {
 	public void authorise() {
 		boolean status;
 		int id;
+		Campaign c;
 
 		id = super.getRequest().getData("campaignId", int.class);
-		status = !this.campaign.findCampaignById(id).getDraftMode();
+		c = this.campaign.findCampaignById(id);
 
+		if (c == null)
+			status = false;
+		else
+			status = !c.getDraftMode();
 		super.setAuthorised(status);
 
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.milestone, "title", "achievements");
+		super.unbindObjects(this.milestone, "title", "achievements", "effort", "kind");
 	}
 }

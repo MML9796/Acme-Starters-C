@@ -43,15 +43,9 @@ public class Donation extends AbstractEntity {
 	@Column
 	private DonationKind		kind;
 
-
-	enum DonationKind {
-		ALTRUIST, REWARDED, CELEBRATED
-	};
-
-
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Sponsorship sponsorship;
+	private Sponsorship			sponsorship;
 
 }

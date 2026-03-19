@@ -5,5 +5,5 @@
 <acme:form>
 	<acme:form-textbox code="any.sponsor.form.label.address" path="address"/>
 	<acme:form-textbox code="any.sponsor.form.label.im" path="im"/>
-	<acme:form-textbox code="any.sponsor.form.label.gold" path="gold"/>
+	<acme:form-checkbox code="any.sponsor.form.label.gold" path="gold"/>
 </acme:form>

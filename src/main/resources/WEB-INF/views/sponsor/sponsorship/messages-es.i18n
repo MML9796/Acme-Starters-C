@@ -15,3 +15,8 @@ sponsor.sponsorship.form.label.monthsActive = Meses activos
 sponsor.sponsorship.form.label.totalMoney = Dinero Total
 sponsor.sponsorship.form.label.moreInfo = Más Info
 sponsor.sponsorship.button.donation = Donación
+
+sponsor.sponsorship.button.publish = Publicar
+sponsor.sponsorship.button.delete = Borrar
+sponsor.sponsorship.button.create = Crear
+sponsor.sponsorship.button.update = Actualizar

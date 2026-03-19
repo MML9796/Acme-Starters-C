@@ -6,13 +6,14 @@ any.campaign.list.label.name = Nombre
 any.campaign.list.label.startMoment = Comienzo
 any.campaign.list.label.endMoment = Fin
 
+
 any.campaign.form.label.ticker = Ticket
 any.campaign.form.label.name = Nombre
 any.campaign.form.label.description = Descripción
 any.campaign.form.label.startMoment = Comienzo
 any.campaign.form.label.endMoment = Fin
 any.campaign.form.label.monthsActive = Meses Activos
-any.campaign.form.label.effort = Media 
+any.campaign.form.label.effort = Esfuerzo 
 any.campaign.form.label.moreInfo = Más Info
 any.campaign.button.milestone = Hito
 any.campaign.button.spokesperson= Portavoz
