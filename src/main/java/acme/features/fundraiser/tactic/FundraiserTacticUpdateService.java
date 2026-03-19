@@ -76,5 +76,7 @@ public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, T
 		super.unbindObject(this.tactic, "name", "expectedPercentage", "kind", "notes");
 		SelectChoices opcionesKind = SelectChoices.from(TacticKind.class, this.tactic.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("draftMode", this.tactic.getStrategy().getDraftMode());
+		super.unbindGlobal("id", this.tactic.getId());
 	}
 }

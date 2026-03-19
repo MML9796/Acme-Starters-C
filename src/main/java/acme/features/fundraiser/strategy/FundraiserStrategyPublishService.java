@@ -53,7 +53,7 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 		super.validateObject(this.strategy);
 		if (!super.getErrors().hasErrors()) {
 			int t;
-			t = this.tacticRepository.findAllTacticByStrategyId(this.strategy.getId()).size();
+			t = this.tacticRepository.findNumberTacticByStrategyId(this.strategy.getId());
 			Boolean haveTactic;
 			haveTactic = t > 0;
 			super.state(haveTactic, "*", "acme.publish.campaign.noHaveTactic.message");
