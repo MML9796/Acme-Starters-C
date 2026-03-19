@@ -19,5 +19,8 @@ public class SponsorDonationController extends AbstractController<Sponsor, Donat
 
 		super.addBasicCommand("list", SponsorDonationListService.class);
 		super.addBasicCommand("show", SponsorDonationShowService.class);
+		super.addBasicCommand("update", SponsorDonationUpdateService.class);
+		super.addBasicCommand("create", SponsorDonationCreateService.class);
+		super.addBasicCommand("delete", SponsorDonationDeleteService.class);
 	}
 }

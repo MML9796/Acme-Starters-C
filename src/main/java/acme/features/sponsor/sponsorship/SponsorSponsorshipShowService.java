@@ -29,17 +29,22 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 	@Override
 	public void authorise() {
 		boolean status;
-		int idSponsorship;
-		int idS;
-		idSponsorship = this.sponsorship.getSponsor().getId();
-		idS = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = idSponsorship == idS;
+
+		int id = super.getRequest().getData("id", int.class);
+		Sponsorship s = this.repository.findSponsorshipById(id);
+
+		if (s != null) {
+			int idS = super.getRequest().getPrincipal().getActiveRealm().getId();
+			status = s.getSponsor().getId() == idS;
+		} else
+			status = false;
+
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "monthsActive", "totalMoney", "moreInfo");
+		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "monthsActive", "totalMoney", "moreInfo", "draftMode");
 		super.unbindGlobal("id", this.sponsorship.getId());
 		super.unbindGlobal("sponsorId", this.sponsorship.getSponsor().getId());
 	}

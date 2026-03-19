@@ -32,30 +32,28 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 		if (sponsorship == null)
 			resultado = true;
 		else {
+			{
+				boolean uniqueSponsorship;
+				Sponsorship existingSponsorship;
+
+				existingSponsorship = this.repository.findSponsorshipByTicker(sponsorship.getTicker());
+				uniqueSponsorship = existingSponsorship == null || existingSponsorship.equals(sponsorship);
+				super.state(context, uniqueSponsorship, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
+			}
+			{
+				if (sponsorship.getEndMoment() != null && sponsorship.getStartMoment() != null) {
+					boolean correctDate;
+					correctDate = sponsorship.getEndMoment().after(sponsorship.getStartMoment());
+					super.state(context, correctDate, "endMoment", "acme.validation.sponsorship.invalid-date.message");
+				}
+			}
 
 			if (!sponsorship.getDraftMode()) {
-				{
-					boolean uniqueSponsorship;
-					Sponsorship existingSponsorship;
+				boolean hasDonation = true;
+				Integer existingDonations = this.repository.findDonationsSizeBySponsorshipId(sponsorship.getId());
+				hasDonation = existingDonations != null && existingDonations > 0;
 
-					existingSponsorship = this.repository.findSponsorshipByTicker(sponsorship.getTicker());
-					uniqueSponsorship = existingSponsorship == null || existingSponsorship.equals(sponsorship);
-					super.state(context, uniqueSponsorship, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
-				}
-				{
-					if (sponsorship.getEndMoment() != null && sponsorship.getStartMoment() != null) {
-						boolean correctDate;
-						correctDate = sponsorship.getEndMoment().after(sponsorship.getStartMoment());
-						super.state(context, correctDate, "endMoment", "acme.validation.sponsorship.invalid-date.message");
-					}
-				}
-				{
-					boolean hasDonation = true;
-					Integer existingDonations = this.repository.findDonationsSizeBySponsorshipId(sponsorship.getId());
-					hasDonation = existingDonations != null && existingDonations > 0;
-
-					super.state(context, hasDonation, "ticker", "acme.validation.sponsorship.missing-donations.message");
-				}
+				super.state(context, hasDonation, "ticker", "acme.validation.sponsorship.missing-donations.message");
 			}
 
 			resultado = !super.hasErrors(context);

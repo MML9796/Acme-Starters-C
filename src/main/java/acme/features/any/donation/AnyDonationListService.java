@@ -34,16 +34,19 @@ public class AnyDonationListService extends AbstractService<Any, Donation> {
 	@Override
 	public void authorise() {
 		boolean status;
-
 		int id = super.getRequest().getData("sponsorshipId", int.class);
-		status = !this.repoSponsorship.findSponsorshipById(id).getDraftMode();
+
+		if (this.repoSponsorship.findSponsorshipById(id) == null)
+			status = false;
+		else
+			status = !this.repoSponsorship.findSponsorshipById(id).getDraftMode();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.donation, "name", "notes");
+		super.unbindObjects(this.donation, "name", "notes", "money", "kind");
 	}
 
 }

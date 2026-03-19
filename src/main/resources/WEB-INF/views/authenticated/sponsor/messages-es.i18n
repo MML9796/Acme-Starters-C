@@ -1,0 +1,10 @@
+# messages-es.i18n
+
+authenticated.sponsor.form.title = Formulario de Patrocinador
+
+authenticated.sponsor.form.label.address = Dirección
+authenticated.sponsor.form.label.im = Identificador
+authenticated.sponsor.form.label.gold = Oro
+
+authenticated.sponsor.form.button.create = Registro
+authenticated.sponsor.form.button.update = Actualización

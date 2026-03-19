@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.donation.Donation;
+import acme.entities.sponsorship.Sponsorship;
+import acme.features.sponsor.sponsorship.SponsorSponsorshipRepository;
 import acme.realms.Sponsor;
 
 @Service
@@ -15,8 +17,10 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 
 	//Internal state
 	@Autowired
-	private SponsorDonationRepository	repository;
-	private Collection<Donation>		donation;
+	private SponsorDonationRepository		repository;
+	@Autowired
+	private SponsorSponsorshipRepository	sponsorshipRepository;
+	private Collection<Donation>			donation;
 
 
 	//AbstractService interface
@@ -31,15 +35,30 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
-		id = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.donation.stream().allMatch(d -> d.getSponsorship().getSponsor().getId() == id);
+
+		int sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
+
+		int principalId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		var sponsorship = this.sponsorshipRepository.findSponsorshipById(sponsorshipId);
+
+		if (sponsorship == null)
+			status = false;
+		else
+			status = sponsorship.getSponsor().getId() == principalId;
+
 		super.setAuthorised(status);
 
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.donation, "name", "notes");
+		Sponsorship spsh;
+		int id;
+		id = super.getRequest().getData("sponsorshipId", int.class);
+		spsh = this.sponsorshipRepository.findSponsorshipById(id);
+		super.unbindObjects(this.donation, "name", "notes", "money", "kind");
+		super.unbindGlobal("draftMode", spsh.getDraftMode());
+		super.unbindGlobal("sponsorshipId", spsh.getId());
 	}
 }

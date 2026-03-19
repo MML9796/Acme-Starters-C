@@ -11,7 +11,7 @@ import acme.entities.donation.DonationKind;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorDonationShowService extends AbstractService<Sponsor, Donation> {
+public class SponsorDonationDeleteService extends AbstractService<Sponsor, Donation> {
 
 	//Internal state
 	@Autowired
@@ -23,7 +23,6 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.donation = this.repository.findDonationById(id);
 	}
@@ -31,26 +30,37 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void authorise() {
 		boolean status;
-
-		int donationId = super.getRequest().getData("id", int.class);
-		Donation d = this.repository.findDonationById(donationId);
-		int principalId = super.getRequest().getPrincipal().getActiveRealm().getId();
-
-		if (d == null)
-			status = false;
-		else
-			status = d.getSponsorship().getSponsor().getId() == principalId;
-
+		int sponsorId, donationId;
+		Donation d;
+		sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		donationId = super.getRequest().getData("id", int.class);
+		d = this.repository.findDonationById(donationId);
+		status = d != null && d.getSponsorship().getSponsor().getId() == sponsorId && d.getSponsorship().getDraftMode();
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.donation);
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.donation);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.delete(this.donation);
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObject(this.donation, "name", "notes", "money", "kind");
-		super.unbindGlobal("draftMode", this.donation.getSponsorship().getDraftMode());
-		super.unbindGlobal("sponsorshipId", this.donation.getSponsorship().getId());
-		super.unbindGlobal("id", this.donation.getId());
 		SelectChoices opcionesKind = SelectChoices.from(DonationKind.class, this.donation.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("draftMode", this.donation.getSponsorship().getDraftMode());
+		super.unbindGlobal("id", this.donation.getId());
+
 	}
 }
