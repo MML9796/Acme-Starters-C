@@ -28,7 +28,10 @@ public class AnyInventorShowService extends AbstractService<Any, Inventor> {
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status = false;
+		if (this.inventor != null)
+			status = true;
+		super.setAuthorised(status);
 	}
 
 	@Override

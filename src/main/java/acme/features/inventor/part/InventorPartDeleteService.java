@@ -1,22 +1,22 @@
 
-package acme.features.any.part;
+package acme.features.inventor.part;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.part.Part;
 import acme.entities.part.Part.PartKind;
+import acme.realms.Inventor;
 
 @Service
-public class AnyPartShowService extends AbstractService<Any, Part> {
+public class InventorPartDeleteService extends AbstractService<Inventor, Part> {
 
 	//Internal state
 	@Autowired
-	private AnyPartRepository	repository;
-	private Part				part;
+	private InventorPartRepository	repository;
+	private Part					part;
 
 
 	//AbstractService interface
@@ -29,10 +29,26 @@ public class AnyPartShowService extends AbstractService<Any, Part> {
 
 	@Override
 	public void authorise() {
-		boolean status = false;
-		if (this.part != null)
-			status = !this.part.getInvention().getDraftMode();
+		boolean status;
+		int inventorId;
+		inventorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = this.part != null && this.part.getInvention().getInventor().getId() == inventorId && this.part.getInvention().getDraftMode();
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.part);
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.part);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.delete(this.part);
 	}
 
 	@Override
@@ -40,5 +56,9 @@ public class AnyPartShowService extends AbstractService<Any, Part> {
 		super.unbindObject(this.part, "name", "description", "cost", "kind");
 		SelectChoices opcionesKind = SelectChoices.from(PartKind.class, this.part.getKind());
 		super.unbindGlobal("listaKinds", opcionesKind);
+		super.unbindGlobal("draftMode", this.part.getInvention().getDraftMode());
+		super.unbindGlobal("id", this.part.getId());
+
 	}
+
 }

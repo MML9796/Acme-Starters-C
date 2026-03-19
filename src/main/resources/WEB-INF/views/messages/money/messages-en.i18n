@@ -1,2 +1,2 @@
-acme.validation.money.eur-currency.message = Money currency must be Euros
+acme.validation.money.eur-currency.message = Money currency must be EUR
 acme.validation.money.range.message = Invalid Money range

@@ -28,10 +28,9 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = !this.invention.getDraftMode();
-
+		boolean status = false;
+		if (this.invention != null)
+			status = !this.invention.getDraftMode();
 		super.setAuthorised(status);
 	}
 
