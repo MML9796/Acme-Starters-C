@@ -40,16 +40,12 @@ public class SponsorDonationCreateService extends AbstractService<Sponsor, Donat
 	public void authorise() {
 		boolean status;
 
-		String method = super.getRequest().getMethod();
 		int sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
 		Sponsorship spsh = this.sponsorshipRepository.findSponsorshipById(sponsorshipId);
+		int sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		if (method.equals("GET"))
-			status = spsh != null;
-		else {
-			int sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			status = spsh != null && spsh.getId() == sponsorshipId && spsh.getSponsor().getId() == sponsorId && spsh.getDraftMode();
-		}
+		status = spsh != null && spsh.getSponsor().getId() == sponsorId && spsh.getDraftMode();
+
 		super.setAuthorised(status);
 	}
 
