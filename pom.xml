@@ -23,21 +23,21 @@
 	
 	<artifactId>Acme-Starters</artifactId>
 	<!-- Omit the version tag below unless it's different from the Acme Framework version -->
-	<version>C</version>
+	<version>B</version>
 	<packaging>war</packaging>
 	
 	<parent>
 		<groupId>Acme</groupId>
 		<artifactId>pom</artifactId>
-		<version>26.3.0</version>
-		<relativePath>../../pom-26.3.0.xml</relativePath>
+		<version>26.4.0</version>
+		<relativePath>../../pom-26.4.0.xml</relativePath>
 	</parent>
 	
 	<dependencies>
 		<dependency>
 			<groupId>Acme</groupId>
 			<artifactId>Acme-Framework</artifactId>
-			<version>26.3.0</version>
+			<version>26.4.0</version>
 		</dependency>
 	</dependencies>
 </project>
